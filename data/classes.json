@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:24:03.052895+00:00",
+  "updated_at": "2026-11-16T16:24:04.779957+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1794,6 +1794,25 @@
                 {
                   "url": "https://docs.google.com/spreadsheets/d/1PBFAMlE-G1TKJ2iEnIzsXTeYEPowJoyXEx2cfKfIDZE/edit?usp=sharing",
                   "label": "Google Slides / Docs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MATH 2ND PAPER",
+          "classes": [
+            {
+              "id": "cv--1003026842244-910-links",
+              "source_key": "-1003026842244:910:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "MATH 2ND PAPER",
+              "date": "2026-05-07T05:06:11+00:00",
+              "telegram_message_id": 910,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
                 }
               ]
             }
