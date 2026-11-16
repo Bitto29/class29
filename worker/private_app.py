@@ -5,8 +5,8 @@ from fastapi.responses import FileResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from itsdangerous import URLSafeTimedSerializer, BadSignature, SignatureExpired
 from dotenv import load_dotenv
-from setup_api import app
-from common import GitHubJSON
+from worker.setup_api import app
+from worker.common import GitHubJSON
 import httpx
 
 load_dotenv()
