@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:24:01.803172+00:00",
+  "updated_at": "2026-11-16T16:24:03.052895+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1780,6 +1780,20 @@
                 {
                   "url": "https://t.me/c/3026842244/10/949",
                   "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-960-links",
+              "source_key": "-1003026842244:960:links",
+              "title": "🔴 ACS FRB 26 - PCBD 🔴",
+              "topic": "MATH 1ST PAPER",
+              "date": "2026-05-07T05:17:00+00:00",
+              "telegram_message_id": 960,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1PBFAMlE-G1TKJ2iEnIzsXTeYEPowJoyXEx2cfKfIDZE/edit?usp=sharing",
+                  "label": "Google Slides / Docs"
                 }
               ]
             }
