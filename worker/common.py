@@ -12,10 +12,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 YT = re.compile(
-    r"(?:https?://)?(?:www\\.|m\\.)?(?:youtube\\.com/(?:watch\\?v=|shorts/|live/)|youtu\\.be/)([A-Za-z0-9_-]{11})",
+    r"(?:https?://)?(?:www\.|m\.)?(?:youtube\.com/(?:watch\?v=|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})",
     re.I,
 )
-URL = re.compile(r"https?://[^\\s<>\\])}]+", re.I)
+URL = re.compile(r"https?://[^\s<>\])}]+", re.I)
 
 
 def env(key):
