@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:58.842604+00:00",
+  "updated_at": "2026-11-16T16:24:00.206234+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1718,6 +1718,20 @@
               "resources": [],
               "video_id": "67B9P3TgKa8",
               "url": "https://www.youtube.com/watch?v=67B9P3TgKa8"
+            },
+            {
+              "id": "cv--1003026842244-963-links",
+              "source_key": "-1003026842244:963:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "MATH 1ST PAPER",
+              "date": "2026-05-07T05:23:37+00:00",
+              "telegram_message_id": 963,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         },
