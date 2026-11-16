@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import httpx
 from dotenv import load_dotenv
 load_dotenv()
-YT=re.compile(r'(?:https?://)?(?:www\\.|m\\.)?(?:youtube\\.com/(?:watch\\?v=|shorts/|live/)|youtu\\.be/)([A-Za-z0-9_-]{11})',re.I)
+YT=re.compile(r'(?:https?://)?(?:www\.|m\.)?(?:youtube\.com/(?:watch\?v=|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})',re.I)
 def env(k):
  v=os.getenv(k)
  if not v: raise RuntimeError('Missing environment variable: '+k)
