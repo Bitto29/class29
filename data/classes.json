@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:24:44.611080+00:00",
+  "updated_at": "2026-11-16T16:24:46.052331+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -842,6 +842,20 @@
                 {
                   "url": "https://drive.google.com/file/d/15ApHlIDyPjukbN__MCRop4Mrw4D7U3ra/view?usp=sharing",
                   "label": "Google Drive"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-868-links",
+              "source_key": "-1003026842244:868:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "BIOLOGY 2ND PAPER",
+              "date": "2026-05-07T04:47:48+00:00",
+              "telegram_message_id": 868,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
                 }
               ]
             }
