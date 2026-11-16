@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:28:38.442241+00:00",
+  "updated_at": "2026-11-16T16:28:39.820766+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -6891,6 +6891,26 @@
               ],
               "video_id": "nMMhUCGRh3Q",
               "url": "https://www.youtube.com/watch?v=nMMhUCGRh3Q"
+            },
+            {
+              "id": "cv--1002935156662-3476-Ubf9UiTuE98",
+              "source_key": "-1002935156662:3476:Ubf9UiTuE98",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐅𝐑𝐄𝐄 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "BANGLA ALL IN ONE",
+              "date": "2026-05-06T18:10:13+00:00",
+              "telegram_message_id": 3476,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1jkylnK1vkmnOljaksUW1-yviUgjw0I5W?usp=drive_link",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ],
+              "video_id": "Ubf9UiTuE98",
+              "url": "https://www.youtube.com/watch?v=Ubf9UiTuE98"
             }
           ]
         },
