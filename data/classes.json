@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:47.978968+00:00",
+  "updated_at": "2026-11-16T16:19:49.053946+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -726,6 +726,25 @@
       "id": "-1003984486117",
       "name": "PCBD - ( POWERPLAY 27 )",
       "topics": [
+        {
+          "name": "ARCHIVE",
+          "classes": [
+            {
+              "id": "cv--1003984486117-18-links",
+              "source_key": "-1003984486117:18:links",
+              "title": "https://t.me/+JoOMsAe2cAo3YzY1",
+              "topic": "ARCHIVE",
+              "date": "2026-10-09T13:32:13+00:00",
+              "telegram_message_id": 18,
+              "resources": [
+                {
+                  "url": "https://t.me/+JoOMsAe2cAo3YzY1",
+                  "label": "t.me"
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "BANGLA",
           "classes": [
