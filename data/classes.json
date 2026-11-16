@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:41.788619+00:00",
+  "updated_at": "2026-11-16T16:19:42.949682+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -529,6 +529,48 @@
                 },
                 {
                   "url": "https://t.me/c/4201359575/15/330",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1004201359575-178-links",
+              "source_key": "-1004201359575:178:links",
+              "title": "ACS FRB 27 - ENGLISH 2ND INDEX",
+              "topic": "ENGLISH",
+              "date": "2026-11-01T08:36:16+00:00",
+              "telegram_message_id": 178,
+              "resources": [
+                {
+                  "url": "https://t.me/c/4201359575/15/188",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/199",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/248",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/280",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/284",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/285",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/292",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/333",
                   "label": "t.me"
                 }
               ]
