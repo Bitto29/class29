@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:18.427438+00:00",
+  "updated_at": "2026-11-16T16:27:19.605153+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2810,6 +2810,20 @@
                 {
                   "url": "https://docs.google.com/spreadsheets/d/1KjSvWi3UmyFR5pdIMmSj9wIqpTJ9lwbRgvHfW2P5_Iw/edit?usp=sharing",
                   "label": "Google Slides / Docs"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-418-links",
+              "source_key": "-1003026842244:418:links",
+              "title": "TELEGRAM COURSE EXPERIENCE CONTEST 2025!",
+              "topic": "General",
+              "date": "2025-12-24T09:38:22+00:00",
+              "telegram_message_id": 418,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL/487",
+                  "label": "t.me"
                 }
               ]
             }
