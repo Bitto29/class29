@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:38.333059+00:00",
+  "updated_at": "2026-11-16T16:19:39.436895+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -185,6 +185,40 @@
                 },
                 {
                   "url": "https://t.me/c/4201359575/14/323",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1004201359575-193-links",
+              "source_key": "-1004201359575:193:links",
+              "title": "ACS FRB 27 - BANGLA 1ST  INDEX",
+              "topic": "BANGLA",
+              "date": "2026-11-01T14:51:43+00:00",
+              "telegram_message_id": 193,
+              "resources": [
+                {
+                  "url": "https://t.me/c/4201359575/14/196",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/14/231",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/14/223",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/14/245",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/14/305",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/14/328",
                   "label": "t.me"
                 }
               ]
