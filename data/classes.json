@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:13.920644+00:00",
+  "updated_at": "2026-11-16T16:23:15.260068+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1137,6 +1137,22 @@
               ],
               "video_id": "zFKAKNQThIU",
               "url": "https://www.youtube.com/watch?v=zFKAKNQThIU"
+            },
+            {
+              "id": "cv--1003026842244-1067-41koleS89og",
+              "source_key": "-1003026842244:1067:41koleS89og",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "ICT ALL IN ONE",
+              "date": "2026-05-07T10:56:56+00:00",
+              "telegram_message_id": 1067,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/116xfWJi0vvyCUHOy382Z3ONx_nOeDX-5/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "41koleS89og",
+              "url": "https://www.youtube.com/watch?v=41koleS89og"
             }
           ]
         },
