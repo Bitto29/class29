@@ -1,6 +1,6 @@
-# ClassVault 29
+# Class 29
 
-A public, database-free library for class videos and shared slide/PDF links from multiple Telegram forum groups.
+A personal, database-free library for class videos and shared slide/PDF links from multiple Telegram groups. The site is intentionally simple to open on both phone and PC without creating a separate website account.
 
 ## What it collects
 - YouTube video links posted in configured group topics.
@@ -9,33 +9,34 @@ A public, database-free library for class videos and shared slide/PDF links from
 - Group → Topic → Class organization, with each class showing its video and available material links.
 
 ## Architecture
-Telegram groups (your own authorized Telegram user session) → persistent Python listener → GitHub Contents API → data/classes.json → public static website.
+Telegram groups (your own authorized Telegram user session) → persistent cloud listener → GitHub Contents API → data/classes.json → static website.
 
 No database is used. The public website only displays extracted class titles and links, not the rest of Telegram messages.
 
-## Setup
-1. Enable GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
-2. Create Telegram API credentials at https://my.telegram.org.
-3. In the Render background worker environment, set the secrets listed below.
-4. Set TELEGRAM_GROUPS_JSON to a one-line JSON array. Example:
-   `[{"id":-1001234567890,"name":"PCBD - POWERPLAY 27"},{"id":-1001234567891,"name":"PCBD - ACS FRB 27"}]`
-   Include every group the Telegram account has joined and that you want to import. Use each group's numeric Telegram ID, not its display name.
-5. Install Python 3.10+ in the worker folder: `pip install -r requirements.txt`.
-6. Run `python auth_session.py` once on your own computer and securely store the printed session string as TELEGRAM_SESSION.
-7. Run `python list_groups.py` to print the joined group's numeric IDs. Select the 5–10 groups you want and enter their IDs/names in TELEGRAM_GROUPS_JSON.
-8. Run `python importer.py` once to import accessible old topic history from every configured group.
-9. Deploy `worker/listener.py` as a persistent Render background worker. It watches all configured groups for new messages.
+## Current setup status
+The static library and Telegram listener are in the repository. The current listener still requires its Telegram session, API credentials, selected group IDs, and GitHub token to be configured as private cloud environment variables. A browser-only Telegram connection and group-selection dashboard has not yet been implemented. No Telegram account is connected until you complete that authorization.
 
-Required private environment variables: TELEGRAM_API_ID, TELEGRAM_API_HASH, TELEGRAM_PHONE, TELEGRAM_SESSION, TELEGRAM_GROUPS_JSON, GITHUB_TOKEN, GITHUB_REPOSITORY.
+## Deployment
+1. Enable GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
+2. Deploy the persistent worker using the included Render configuration.
+3. Configure the required private environment variables in Render.
+
+## Private cloud configuration
+Required variables: TELEGRAM_API_ID, TELEGRAM_API_HASH, TELEGRAM_PHONE, TELEGRAM_SESSION, TELEGRAM_GROUPS_JSON, GITHUB_TOKEN, GITHUB_REPOSITORY.
 
 The GitHub token needs Contents: Read and write permission on this repository only. Never commit .env or a Telegram session, and never send tokens/session strings in chat.
+
+The current setup still expects the Telegram session and selected group IDs to be configured by the service owner. The planned browser setup dashboard is a separate implementation step; do not assume it is available yet.
 
 ## PDF and slide links
 The importer captures links present in Telegram message text and hidden URL entities. Google Drive, Google Slides/Docs, direct PDF, and other URLs are displayed under Class materials. This does not copy or host the PDF itself. The original link must be accessible to the website visitor. For private Drive files, change sharing to anyone-with-the-link or the visitor will need permission.
 
 Telegram files uploaded directly (without an external link) are not downloaded or mirrored by this version.
 
-## Important
-The repository and website are public. Class titles, YouTube links, and extracted material links in classes.json are visible to everyone. Use only content you have permission to share. Some YouTube videos may disable embedding.
+## Public access and privacy
+GitHub Pages is public. Anyone who has the URL can open the site, and the class titles, YouTube links, and extracted material links in data/classes.json are publicly readable. Not sharing the URL reduces discoverability but does not make it private. Use only content you have permission to share. Never put Telegram credentials, login codes, session strings, or GitHub tokens in the website or repository.
 
-Instant sync is event-driven when Telegram delivers a message, but GitHub API and Pages/CDN caching may add a short delay. Watch progress is stored locally in each visitor's browser only.
+No separate website sign-up is required for the static library. Watch progress is stored locally in each browser, not synchronized across devices.
+
+## Sync
+The listener is designed for event-driven updates when Telegram delivers a new message. GitHub API and Pages/CDN caching may add a short delay. The worker is not active until deployed and configured.
