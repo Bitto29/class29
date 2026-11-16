@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:13.609990+00:00",
+  "updated_at": "2026-11-16T16:19:14.650159+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -208,6 +208,22 @@
               ],
               "video_id": "V1JPaE3PBOk",
               "url": "https://www.youtube.com/watch?v=V1JPaE3PBOk"
+            }
+          ]
+        },
+        {
+          "name": "General",
+          "classes": [
+            {
+              "id": "cv--1004201359575-288-VuDh0_dRJCw",
+              "source_key": "-1004201359575:288:VuDh0_dRJCw",
+              "title": "✅ Gerund & Participle এর সবকিছু।",
+              "topic": "General",
+              "date": "2026-11-09T16:22:42+00:00",
+              "telegram_message_id": 288,
+              "resources": [],
+              "video_id": "VuDh0_dRJCw",
+              "url": "https://www.youtube.com/watch?v=VuDh0_dRJCw"
             }
           ]
         }
