@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:52.116533+00:00",
+  "updated_at": "2026-11-16T16:22:53.549609+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -862,6 +862,25 @@
               ],
               "video_id": "FavVohC4XSs",
               "url": "https://www.youtube.com/watch?v=FavVohC4XSs"
+            }
+          ]
+        },
+        {
+          "name": "ICT ALL IN ONE",
+          "classes": [
+            {
+              "id": "cv--1003026842244-1086-links",
+              "source_key": "-1003026842244:1086:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "ICT ALL IN ONE",
+              "date": "2026-05-07T11:03:45+00:00",
+              "telegram_message_id": 1086,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         },
