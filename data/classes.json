@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:21:24.562493+00:00",
+  "updated_at": "2026-11-16T16:21:26.142057+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1306,6 +1306,20 @@
               ],
               "video_id": "SxjBA0wQIw0",
               "url": "https://www.youtube.com/watch?v=SxjBA0wQIw0"
+            },
+            {
+              "id": "cv--1003026842244-1278-links",
+              "source_key": "-1003026842244:1278:links",
+              "title": "🔴 ACS FRB 26 - PCBD 🔴",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-08-31T08:57:53+00:00",
+              "telegram_message_id": 1278,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1PBFAMlE-G1TKJ2iEnIzsXTeYEPowJoyXEx2cfKfIDZE/edit?usp=sharing",
+                  "label": "Google Slides / Docs"
+                }
+              ]
             }
           ]
         }
