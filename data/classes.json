@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:15.645764+00:00",
+  "updated_at": "2026-11-16T16:19:16.650468+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -224,6 +224,30 @@
               ],
               "video_id": "KykXtnc5cyk",
               "url": "https://www.youtube.com/watch?v=KykXtnc5cyk"
+            },
+            {
+              "id": "cv--1004201359575-284-mXtyPvezvpo",
+              "source_key": "-1004201359575:284:mXtyPvezvpo",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "ENGLISH",
+              "date": "2026-11-08T18:08:37+00:00",
+              "telegram_message_id": 284,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1JzC-yqPGbXLaLuNRqqt_ehDW2Mfj7Tpc/view?usp=drivesdk",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1Gfzvti5PjYqNoz1kKirV6Uf_RiK20DRV/preview",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1Wx8x1ijIbnCeKrZYMnYdeSBp-bUtTetm/preview",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "mXtyPvezvpo",
+              "url": "https://www.youtube.com/watch?v=mXtyPvezvpo"
             }
           ]
         },
