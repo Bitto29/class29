@@ -1,6 +1,6 @@
 services:
   - type: worker
-    name: classvault29-telegram-sync
+    name: class29-telegram-sync
     runtime: python
     rootDir: worker
     buildCommand: pip install -r requirements.txt
