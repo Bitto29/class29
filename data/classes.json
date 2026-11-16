@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:35.578914+00:00",
+  "updated_at": "2026-11-16T16:22:36.931957+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1174,6 +1174,22 @@
                   "label": "youtu.be"
                 }
               ]
+            },
+            {
+              "id": "cv--1003026842244-1193-hKHvzXjvusA",
+              "source_key": "-1003026842244:1193:hKHvzXjvusA",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "MATH 1ST PAPER",
+              "date": "2026-08-29T14:54:16+00:00",
+              "telegram_message_id": 1193,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/104Vlk0fq2qun-qgmTeBSKGIX38HMEpSo?usp=drive_link",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "hKHvzXjvusA",
+              "url": "https://www.youtube.com/watch?v=hKHvzXjvusA"
             }
           ]
         },
