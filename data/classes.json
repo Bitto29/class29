@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:44.074035+00:00",
+  "updated_at": "2026-11-16T16:19:45.391282+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -634,6 +634,20 @@
                 {
                   "url": "https://www.youtube.com/playlist?list=PLp4vB8w1GpME65l8v_EY4Jzn1r9LV1HGz",
                   "label": "www.youtube.com"
+                }
+              ]
+            },
+            {
+              "id": "cv--1004201359575-160-links",
+              "source_key": "-1004201359575:160:links",
+              "title": "FRB 27 CLASS ROUTINE",
+              "topic": "General",
+              "date": "2026-10-28T00:37:22+00:00",
+              "telegram_message_id": 160,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1gi9xBgjaPnQ2xwhSCBocex_FkJgeN96t12bqZRZsMk8",
+                  "label": "Google Slides / Docs"
                 }
               ]
             }
