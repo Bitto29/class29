@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:11.206588+00:00",
+  "updated_at": "2026-11-16T16:27:12.727967+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2600,6 +2600,20 @@
               "resources": [
                 {
                   "url": "https://drive.google.com/file/d/1rdeTRkSi9Jd2Trd4TsGjVMQwpKuhkWrB/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-541-links",
+              "source_key": "-1003026842244:541:links",
+              "title": "ENGLISH SUGGESTION : https://drive.google.com/file/d/1Va44HQpCiMQaRzZ-IJZ0ADFGqbX8oFaw/view?usp=sharing",
+              "topic": "COURSE MATERIALS FRB26",
+              "date": "2026-02-15T04:37:24+00:00",
+              "telegram_message_id": 541,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1Va44HQpCiMQaRzZ-IJZ0ADFGqbX8oFaw/view?usp=sharing",
                   "label": "Google Drive"
                 }
               ]
