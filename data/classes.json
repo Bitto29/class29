@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:26:26.160866+00:00",
+  "updated_at": "2026-11-16T16:26:27.416437+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2065,6 +2065,24 @@
               ],
               "video_id": "FnFCiNyGu7c",
               "url": "https://www.youtube.com/watch?v=FnFCiNyGu7c"
+            },
+            {
+              "id": "cv--1003026842244-743-links",
+              "source_key": "-1003026842244:743:links",
+              "title": "ᯓ➤ CHEMISTRY 2ND PAPER INDEX",
+              "topic": "CHEMISTRY 2ND PAPER",
+              "date": "2026-05-07T03:18:16+00:00",
+              "telegram_message_id": 743,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1KPwHbhmqE4G-nHEai7Z_Zy4UOAc3Gh1v/view?usp=sharing",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1YeErYsJTgr2cPHguYF-Sz2gz-MUbi0mb/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ]
             }
           ]
         },
