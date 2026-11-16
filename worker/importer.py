@@ -1,13 +1,13 @@
 import asyncio,os
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-from telethon.tl.functions.channels import GetForumTopicsRequest
+from telethon.tl.functions.messages import GetForumTopicsRequest
 from common import env,configured_groups,GitHubJSON,video_ids,extract_links
 
 async def get_topics(c,group):
  topics=[];offset=0
  while True:
-  result=await c(GetForumTopicsRequest(channel=group,offset_date=None,offset_id=0,offset_topic=offset,limit=100))
+  result=await c(GetForumTopicsRequest(peer=group,offset_date=None,offset_id=0,offset_topic=offset,limit=100))
   batch=result.topics or [];topics.extend(batch)
   if len(batch)<100:break
   offset=batch[-1].id
@@ -15,7 +15,10 @@ async def get_topics(c,group):
 
 async def main():
  c=TelegramClient(StringSession(env('TELEGRAM_SESSION')),int(env('TELEGRAM_API_ID')),env('TELEGRAM_API_HASH'))
- await c.start(phone=os.getenv('TELEGRAM_PHONE'));writer=GitHubJSON()
+ await c.connect()
+ if not await c.is_user_authorized():
+  raise RuntimeError('Telegram session is not authorized. Reconnect Telegram.')
+ writer=GitHubJSON()
  try:
   for cfg in configured_groups():
    group=await c.get_entity(cfg['id']);name=cfg['name']
@@ -32,6 +35,7 @@ async def main():
      else:
       await writer.add(cfg['id'],name,topic.title,title,None,resources,m.date,m.id)
    print('Finished:',name)
- finally:await c.disconnect()
+ finally:
+  await c.disconnect()
 
 if __name__=='__main__':asyncio.run(main())
