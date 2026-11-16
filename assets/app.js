@@ -1,4 +1,4 @@
-const DATA_URL='/api/classes';let library={groups:[]};const $=id=>document.getElementById(id);
+const DATA_URL='./data/classes.json';let library={groups:[]};const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const date=v=>{if(!v)return 'Date not set';const d=new Date(v);return Number.isNaN(d.getTime())?'Date not set':d.toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'});};
 function render(){const q=$('search').value.trim().toLowerCase(),root=$('subjects');root.innerHTML='';let count=0,topicCount=0;
