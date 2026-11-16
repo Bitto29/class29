@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:46.156352+00:00",
+  "updated_at": "2026-11-16T16:22:47.468798+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -797,6 +797,22 @@
               "resources": [],
               "video_id": "67B9P3TgKa8",
               "url": "https://www.youtube.com/watch?v=67B9P3TgKa8"
+            },
+            {
+              "id": "cv--1003026842244-1128-k64xGN8Qo6c",
+              "source_key": "-1003026842244:1128:k64xGN8Qo6c",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "General",
+              "date": "2026-05-22T13:55:06+00:00",
+              "telegram_message_id": 1128,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1fB4girFtPeKQB1U1tZWeOMAIQ7HqsS26/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "k64xGN8Qo6c",
+              "url": "https://www.youtube.com/watch?v=k64xGN8Qo6c"
             }
           ]
         },
