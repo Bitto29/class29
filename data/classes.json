@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:26:28.899980+00:00",
+  "updated_at": "2026-11-16T16:26:30.146586+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1494,6 +1494,36 @@
               "resources": [
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-739-links",
+              "source_key": "-1003026842244:739:links",
+              "title": "ᯓ➤ CHEMISTRY 1ST PAPER INDEX",
+              "topic": "CHEMISTRY 1ST PAPER",
+              "date": "2026-05-07T03:03:58+00:00",
+              "telegram_message_id": 739,
+              "resources": [
+                {
+                  "url": "https://t.me/c/3026842244/14/711",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/14/713",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/14/720",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/14/727",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/14/735",
                   "label": "t.me"
                 }
               ]
