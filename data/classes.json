@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:40.691831+00:00",
+  "updated_at": "2026-11-16T16:19:41.788619+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -510,6 +510,28 @@
               ],
               "video_id": "K2HeiV7axfM",
               "url": "https://www.youtube.com/watch?v=K2HeiV7axfM"
+            },
+            {
+              "id": "cv--1004201359575-179-links",
+              "source_key": "-1004201359575:179:links",
+              "title": "ACS FRB 27 - ENGLISH 1ST INDEX",
+              "topic": "ENGLISH",
+              "date": "2026-11-01T08:36:16+00:00",
+              "telegram_message_id": 179,
+              "resources": [
+                {
+                  "url": "https://t.me/c/4201359575/15/312",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/325",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/330",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         },
