@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:18.734849+00:00",
+  "updated_at": "2026-11-16T16:19:19.784487+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -300,6 +300,20 @@
                 {
                   "url": "https://drive.google.com/file/d/1SHuTVtASCjra3imZtg-FXBImPlnV3jDy/view?usp=sharing",
                   "label": "Google Drive"
+                }
+              ]
+            },
+            {
+              "id": "cv--1004201359575-275-links",
+              "source_key": "-1004201359575:275:links",
+              "title": "প্লেলিস্ট লিংক-",
+              "topic": "General",
+              "date": "2026-11-07T13:09:44+00:00",
+              "telegram_message_id": 275,
+              "resources": [
+                {
+                  "url": "https://www.youtube.com/playlist?list=PLp4vB8w1GpME65l8v_EY4Jzn1r9LV1HGz",
+                  "label": "www.youtube.com"
                 }
               ]
             }
