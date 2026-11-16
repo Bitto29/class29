@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:03.857834+00:00",
+  "updated_at": "2026-11-16T16:22:05.750088+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -783,6 +783,56 @@
               "resources": [
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-1226-links",
+              "source_key": "-1003026842244:1226:links",
+              "title": "ᯓ➤ MATH 1ST PAPER INDEX",
+              "topic": "MATH 1ST PAPER",
+              "date": "2026-08-30T17:38:07+00:00",
+              "telegram_message_id": 1226,
+              "resources": [
+                {
+                  "url": "https://t.me/c/3026842244/10/1184",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1186",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1188",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1192",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1196",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1199",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1204",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1209",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1212",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/10/1217",
                   "label": "t.me"
                 }
               ]
