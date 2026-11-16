@@ -1,5 +1,33 @@
 {
   "version": 2,
-  "updated_at": null,
-  "groups": []
+  "updated_at": "2026-11-16T16:18:59.991342+00:00",
+  "groups": [
+    {
+      "id": "-1004201359575",
+      "name": "PCBD - ( ACS FRB 27 )",
+      "topics": [
+        {
+          "name": "ENGLISH",
+          "classes": [
+            {
+              "id": "cv--1004201359575-333-07QWPyuXiCA",
+              "source_key": "-1004201359575:333:07QWPyuXiCA",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "ENGLISH",
+              "date": "2026-11-16T14:43:07+00:00",
+              "telegram_message_id": 333,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1U3do5JeA_JmrYMRGrB62Yb_R0eN-6xGX/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "07QWPyuXiCA",
+              "url": "https://www.youtube.com/watch?v=07QWPyuXiCA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
