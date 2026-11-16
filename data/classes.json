@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:37.219342+00:00",
+  "updated_at": "2026-11-16T16:27:38.693755+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -6667,6 +6667,25 @@
               "topic": "COURSE MATERIALS",
               "date": "2026-05-06T18:17:44+00:00",
               "telegram_message_id": 3528,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ENGLISH ALL IN ONE",
+          "classes": [
+            {
+              "id": "cv--1002935156662-3525-links",
+              "source_key": "-1002935156662:3525:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "ENGLISH ALL IN ONE",
+              "date": "2026-05-06T18:11:53+00:00",
+              "telegram_message_id": 3525,
               "resources": [
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
