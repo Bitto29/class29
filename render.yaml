@@ -1,4 +1,19 @@
 services:
+  - type: web
+    name: class29-telegram-setup
+    runtime: python
+    rootDir: worker
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn setup_api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: SETUP_KEY
+        sync: false
+      - key: CLASS29_SITE_ORIGIN
+        value: https://bitto29.github.io
   - type: worker
     name: class29-telegram-sync
     runtime: python
