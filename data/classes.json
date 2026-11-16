@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:44.907824+00:00",
+  "updated_at": "2026-11-16T16:22:46.156352+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -786,6 +786,17 @@
                   "label": "t.me"
                 }
               ]
+            },
+            {
+              "id": "cv--1003026842244-1142-67B9P3TgKa8",
+              "source_key": "-1003026842244:1142:67B9P3TgKa8",
+              "title": "ONE SHOT BASIC + CQ + MCQ",
+              "topic": "General",
+              "date": "2026-06-08T05:35:50+00:00",
+              "telegram_message_id": 1142,
+              "resources": [],
+              "video_id": "67B9P3TgKa8",
+              "url": "https://www.youtube.com/watch?v=67B9P3TgKa8"
             }
           ]
         },
