@@ -31,7 +31,7 @@ async def main():
      else:await writer.add(group_id,group_name,topic,title,None,resources,m.date,m.id)
     except Exception as e:print('Sync error:',group_name,topic,e)
    c.add_event_handler(handler,events.NewMessage(chats=group))
-  print('ClassVault multi-group listener active. Waiting for new class links…')
+  print('Class 29 multi-group listener active. Waiting for new class links…')
   await c.run_until_disconnected()
  finally:await c.disconnect()
 
