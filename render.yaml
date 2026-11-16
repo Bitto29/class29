@@ -12,7 +12,7 @@ services:
         sync: false
       - key: TELEGRAM_PHONE
         sync: false
-      - key: TELEGRAM_GROUP_ID
+      - key: TELEGRAM_GROUPS_JSON
         sync: false
       - key: TELEGRAM_SESSION
         sync: false
