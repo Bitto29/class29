@@ -1,36 +1,39 @@
-# Class 29 · Personal Edition
+# Class 29
 
-Class 29 is intended for one owner. The website and class data are served through a password-protected Render web service. Telegram messages are read by a separate Render background worker. The worker writes extracted class links to a **private GitHub repository**.
+Class 29 is a simple public class library for personal use. The website is hosted on GitHub Pages. The class list is stored in `data/classes.json`.
 
-## Before deploying
-1. In GitHub, change this repository to **Private**: Settings → General → Danger Zone → Change repository visibility. Confirm the change. This is essential; otherwise the class JSON and source code remain public.
-2. Disable GitHub Pages in Settings → Pages. The site is no longer hosted on GitHub Pages.
-3. Ensure your fine-grained GitHub token is restricted to this repository and has Contents: Read and write. After changing the repository to private, verify that the token still grants access. If not, create a replacement token for the private repository and store it only in Render.
+## Free automatic sync
 
-## Deploy
-1. In Render, create a Blueprint from this private repository using `render.yaml`.
-2. For the web service, set:
-   - `CLASS29_PASSWORD`: a unique password with at least 16 characters.
-   - `CLASS29_SECRET_KEY`: a long random secret (at least 32 random bytes).
-   - `TELEGRAM_API_ID` and `TELEGRAM_API_HASH`.
-   - `GITHUB_TOKEN`: the private-repository token.
-3. For the worker, set:
-   - `TELEGRAM_API_ID`, `TELEGRAM_API_HASH`, `TELEGRAM_PHONE`
-   - `TELEGRAM_SESSION` and `TELEGRAM_GROUPS_JSON` from the protected setup page.
-   - `GITHUB_TOKEN` with Contents: Read and write on this private repo.
-4. Deploy both services. Open the Render web service URL. Sign in with your Class 29 password, then open Connect Telegram.
+Telegram polling is designed to run through GitHub Actions, not Render:
 
-## Security model
-- The web app uses a signed, HttpOnly, Secure, SameSite=Strict cookie with a 14-day lifetime. The password is checked server-side and is not stored in the browser.
-- All site pages, static assets, class data API, and Telegram setup routes require the owner cookie. Only the login page and health check are public.
-- Telegram session, API hash, GitHub token, site password, and cookie-signing key belong only in private Render environment variables. Never commit them or paste them into chat.
-- The setup flow returns the Telethon session to the signed-in browser so the owner can copy it directly into the worker's private environment. The session grants account access and must be treated like a password.
-- GitHub repo and JSON data must remain private. A private repository is not a substitute for protecting Render credentials.
-- Use a unique password and signing key. If you suspect exposure, change the password/signing key and revoke the Telegram session from Telegram Settings → Devices.
-- Render hosts the application and processes credentials; only proceed if you accept that hosting trust. Enable MFA on GitHub and Render accounts.
+- Workflow: `.github/workflows/telegram-sync.yml`
+- Script: `worker/poll_sync.py`
+- Schedule: every 15 minutes
+- The workflow checks the latest 500 messages per selected group and deduplicates already imported messages.
+- Standard GitHub-hosted runners are free for public repositories.
 
-## Data handling
+This is scheduled polling, not a permanently connected listener. New classes appear after the next successful run. GitHub may delay scheduled runs, and scheduled workflows in public repositories can be disabled after 60 days without repository activity.
+
+## Required GitHub Actions secrets
+
+Open the repository's **Settings → Secrets and variables → Actions → New repository secret** and add:
+
+- `TELEGRAM_API_ID`
+- `TELEGRAM_API_HASH`
+- `TELEGRAM_SESSION` (Telethon StringSession for the Telegram account)
+- `TELEGRAM_GROUPS_JSON` (JSON array such as `[{"id":-1001234567890,"name":"Physics"}]`)
+
+The workflow uses GitHub's automatically provided `GITHUB_TOKEN` with repository Contents write permission. A separate personal access token is not required.
+
+**Important:** Telegram session strings grant access to the Telegram account. Never commit them, paste them into chat, or expose them in workflow logs. Store them only as GitHub Actions secrets. Use a unique Telegram account only if appropriate, and revoke the session from Telegram Settings → Devices if it may have been exposed.
+
+## Current limitation: Telegram session setup
+
+The scheduled workflow is committed, but the Telegram login/session setup and group-ID collection are not yet automated in a browser dashboard. The workflow will not sync until all four secrets above are correctly configured. Do not deploy Render or pay for hosting.
+
+## Data and privacy
+
+- The repository and GitHub Pages website are public. Anyone who finds the URL can browse the website and the class data. An unshared URL is not access control.
 - Only YouTube URLs and ordinary resource links in selected group messages are collected.
-- Google Drive/Slides/Docs/PDF links are stored as links, not copied files. Their original sharing permissions still apply.
-- Telegram direct file uploads are not mirrored by the current importer.
-- The worker does not download all Telegram history; the importer must be run separately to backfill older classes.
+- Google Drive/Slides/Docs/PDF files are stored as links, not copied. Original sharing permissions still apply.
+- Telegram direct file uploads are not downloaded by this version.
