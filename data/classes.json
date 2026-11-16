@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:28:56.162158+00:00",
+  "updated_at": "2026-11-16T16:28:57.365803+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -7151,6 +7151,25 @@
               ],
               "video_id": "u0fgcbCANMM",
               "url": "https://www.youtube.com/watch?v=u0fgcbCANMM"
+            }
+          ]
+        },
+        {
+          "name": "BIOLOGY 1ST PAPER",
+          "classes": [
+            {
+              "id": "cv--1002935156662-3463-links",
+              "source_key": "-1002935156662:3463:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "BIOLOGY 1ST PAPER",
+              "date": "2026-05-06T18:05:28+00:00",
+              "telegram_message_id": 3463,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         },
