@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:26:54.634671+00:00",
+  "updated_at": "2026-11-16T16:26:55.849631+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1835,6 +1835,22 @@
                   "label": "Google Drive"
                 }
               ]
+            },
+            {
+              "id": "cv--1003026842244-719-Q8mtnZUNSC0",
+              "source_key": "-1003026842244:719:Q8mtnZUNSC0",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "CHEMISTRY 1ST PAPER",
+              "date": "2026-05-07T02:53:59+00:00",
+              "telegram_message_id": 719,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1e9kcufmq08NXW2bDkbKcKI5ftBhFKttL/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "Q8mtnZUNSC0",
+              "url": "https://www.youtube.com/watch?v=Q8mtnZUNSC0"
             }
           ]
         },
