@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:42.949682+00:00",
+  "updated_at": "2026-11-16T16:19:44.074035+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -571,6 +571,24 @@
                 },
                 {
                   "url": "https://t.me/c/4201359575/15/333",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1004201359575-177-links",
+              "source_key": "-1004201359575:177:links",
+              "title": "PAID COURSE BANGLADESH",
+              "topic": "ENGLISH",
+              "date": "2026-11-01T08:36:15+00:00",
+              "telegram_message_id": 177,
+              "resources": [
+                {
+                  "url": "https://t.me/c/4201359575/15/179",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/4201359575/15/178",
                   "label": "t.me"
                 }
               ]
