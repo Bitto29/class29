@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:08.274656+00:00",
+  "updated_at": "2026-11-16T16:27:09.576371+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2691,6 +2691,20 @@
                 {
                   "url": "https://t.me/+WU_Qyp-jlNdjOWU1",
                   "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-650-links",
+              "source_key": "-1003026842244:650:links",
+              "title": "প্রিয় শিক্ষার্থীরা,",
+              "topic": "General",
+              "date": "2026-04-10T18:00:25+00:00",
+              "telegram_message_id": 650,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1KjSvWi3UmyFR5pdIMmSj9wIqpTJ9lwbRgvHfW2P5_Iw/edit?usp=sharing",
+                  "label": "Google Slides / Docs"
                 }
               ]
             }
