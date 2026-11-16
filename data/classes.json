@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:22.322844+00:00",
+  "updated_at": "2026-11-16T16:27:23.791112+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2740,6 +2740,22 @@
               ],
               "video_id": "e93ArV0r-YY",
               "url": "https://www.youtube.com/watch?v=e93ArV0r-YY"
+            },
+            {
+              "id": "cv--1003026842244-373-EKJ0q3nyQ9c",
+              "source_key": "-1003026842244:373:EKJ0q3nyQ9c",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "ENGLISH ALL IN ONE",
+              "date": "2025-12-16T05:07:04+00:00",
+              "telegram_message_id": 373,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1mrz-FzR2YMurkOR_JMEn0p2KARf6YB7C/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "EKJ0q3nyQ9c",
+              "url": "https://www.youtube.com/watch?v=EKJ0q3nyQ9c"
             }
           ]
         },
