@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:28.108859+00:00",
+  "updated_at": "2026-11-16T16:19:29.464045+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -441,6 +441,22 @@
               ],
               "video_id": "yDob4g2hT8o",
               "url": "https://www.youtube.com/watch?v=yDob4g2hT8o"
+            },
+            {
+              "id": "cv--1004201359575-209-S3U6TXYb59s",
+              "source_key": "-1004201359575:209:S3U6TXYb59s",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "ICT",
+              "date": "2026-11-02T16:52:52+00:00",
+              "telegram_message_id": 209,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1x6DMA13AoKCPbvA1Wxq4oBHsU3SaFKsz/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "S3U6TXYb59s",
+              "url": "https://www.youtube.com/watch?v=S3U6TXYb59s"
             }
           ]
         }
