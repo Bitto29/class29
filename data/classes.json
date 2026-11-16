@@ -1,7 +1,32 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:49.053946+00:00",
+  "updated_at": "2026-11-16T16:19:51.652136+00:00",
   "groups": [
+    {
+      "id": "-1003026842244",
+      "name": "PCBD - ( ACS FRB 26 )",
+      "topics": [
+        {
+          "name": "PHYSICS 2ND PAPER",
+          "classes": [
+            {
+              "id": "cv--1003026842244-1509-links",
+              "source_key": "-1003026842244:1509:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-10-17T14:54:59+00:00",
+              "telegram_message_id": 1509,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "-1004201359575",
       "name": "PCBD - ( ACS FRB 27 )",
