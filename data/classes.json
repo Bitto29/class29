@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:20:16.678939+00:00",
+  "updated_at": "2026-11-16T16:20:18.062578+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -366,6 +366,22 @@
               ],
               "video_id": "DG7HfyXKt6g",
               "url": "https://www.youtube.com/watch?v=DG7HfyXKt6g"
+            },
+            {
+              "id": "cv--1003026842244-1479-d_kzeVKx_E8",
+              "source_key": "-1003026842244:1479:d_kzeVKx_E8",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-10-17T14:54:58+00:00",
+              "telegram_message_id": 1479,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1n0glCHASz9silrpsPb9CQVl6m10tuBFR/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "d_kzeVKx_E8",
+              "url": "https://www.youtube.com/watch?v=d_kzeVKx_E8"
             }
           ]
         }
