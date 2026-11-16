@@ -22,8 +22,9 @@ No database is used. The public website only displays extracted class titles and
    Include every group the Telegram account has joined and that you want to import. Use each group's numeric Telegram ID, not its display name.
 5. Install Python 3.10+ in the worker folder: `pip install -r requirements.txt`.
 6. Run `python auth_session.py` once on your own computer and securely store the printed session string as TELEGRAM_SESSION.
-7. Run `python importer.py` once to import accessible old topic history from every configured group.
-8. Deploy `worker/listener.py` as a persistent Render background worker. It watches all configured groups for new messages.
+7. Run `python list_groups.py` to print the joined group's numeric IDs. Select the 5–10 groups you want and enter their IDs/names in TELEGRAM_GROUPS_JSON.
+8. Run `python importer.py` once to import accessible old topic history from every configured group.
+9. Deploy `worker/listener.py` as a persistent Render background worker. It watches all configured groups for new messages.
 
 Required private environment variables: TELEGRAM_API_ID, TELEGRAM_API_HASH, TELEGRAM_PHONE, TELEGRAM_SESSION, TELEGRAM_GROUPS_JSON, GITHUB_TOKEN, GITHUB_REPOSITORY.
 
