@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:20:34.029850+00:00",
+  "updated_at": "2026-11-16T16:20:35.452292+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -78,6 +78,20 @@
                 {
                   "url": "https://t.me/c/3026842244/13/1377",
                   "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-1379-links",
+              "source_key": "-1003026842244:1379:links",
+              "title": "🔴 ACS FRB 26 - PCBD 🔴",
+              "topic": "BIOLOGY 2ND PAPER",
+              "date": "2026-09-01T16:29:28+00:00",
+              "telegram_message_id": 1379,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1PBFAMlE-G1TKJ2iEnIzsXTeYEPowJoyXEx2cfKfIDZE/edit?usp=sharing",
+                  "label": "Google Slides / Docs"
                 }
               ]
             }
