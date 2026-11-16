@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:54.849555+00:00",
+  "updated_at": "2026-11-16T16:22:56.122648+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -913,6 +913,20 @@
                 {
                   "url": "https://t.me/c/3026842244/16/1081",
                   "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-1084-links",
+              "source_key": "-1003026842244:1084:links",
+              "title": "🔴 ACS FRB 26 - PCBD 🔴",
+              "topic": "ICT ALL IN ONE",
+              "date": "2026-05-07T11:00:31+00:00",
+              "telegram_message_id": 1084,
+              "resources": [
+                {
+                  "url": "https://docs.google.com/spreadsheets/d/1PBFAMlE-G1TKJ2iEnIzsXTeYEPowJoyXEx2cfKfIDZE/edit?usp=sharing",
+                  "label": "Google Slides / Docs"
                 }
               ]
             }
