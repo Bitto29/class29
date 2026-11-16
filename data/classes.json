@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:22:42.264032+00:00",
+  "updated_at": "2026-11-16T16:22:43.534898+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1254,6 +1254,17 @@
               ],
               "video_id": "ps6quLcwgiQ",
               "url": "https://www.youtube.com/watch?v=ps6quLcwgiQ"
+            },
+            {
+              "id": "cv--1003026842244-1185-67B9P3TgKa8",
+              "source_key": "-1003026842244:1185:67B9P3TgKa8",
+              "title": "ONE SHOT BASIC + CQ + MCQ",
+              "topic": "MATH 1ST PAPER",
+              "date": "2026-08-29T11:26:09+00:00",
+              "telegram_message_id": 1185,
+              "resources": [],
+              "video_id": "67B9P3TgKa8",
+              "url": "https://www.youtube.com/watch?v=67B9P3TgKa8"
             }
           ]
         },
