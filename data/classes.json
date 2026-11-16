@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:51.652136+00:00",
+  "updated_at": "2026-11-16T16:19:52.807401+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -19,6 +19,60 @@
               "resources": [
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-1508-links",
+              "source_key": "-1003026842244:1508:links",
+              "title": "ᯓ➤ PHYSICS 2ND PAPER INDEX",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-10-17T14:54:59+00:00",
+              "telegram_message_id": 1508,
+              "resources": [
+                {
+                  "url": "https://t.me/c/3026842244/9/1240",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1244",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1248",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1252",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1257",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1261",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1264",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1268",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1271",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1273",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/9/1277",
                   "label": "t.me"
                 }
               ]
