@@ -1,7 +1,7 @@
 import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-from telethon.tl.functions.channels import GetForumTopicsRequest
+from telethon.tl.functions.messages import GetForumTopicsRequest
 from common import env, configured_groups, GitHubJSON, video_ids, extract_links
 
 async def topic_names(client, group):
@@ -9,7 +9,7 @@ async def topic_names(client, group):
     offset = 0
     while True:
         result = await client(GetForumTopicsRequest(
-            channel=group, offset_date=None, offset_id=0,
+            peer=group, offset_date=None, offset_id=0,
             offset_topic=offset, limit=100
         ))
         batch = result.topics or []
