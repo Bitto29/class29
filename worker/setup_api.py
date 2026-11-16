@@ -1,6 +1,5 @@
-import os, asyncio
+import os
 from fastapi import FastAPI, Header, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -8,16 +7,14 @@ from telethon.errors import SessionPasswordNeededError
 from dotenv import load_dotenv
 
 load_dotenv()
-app=FastAPI(title="Class 29 Telegram Setup")
-origin=os.getenv("CLASS29_SITE_ORIGIN","https://bitto29.github.io")
-app.add_middleware(CORSMiddleware,allow_origins=[origin],allow_credentials=False,allow_methods=["POST","GET"],allow_headers=["Content-Type","X-Setup-Key"])
+app=FastAPI(title="Class 29 Private Library")
 pending={}
 def guard(k):
-    expected=os.getenv("SETUP_KEY")
-    if not expected or not k or k!=expected: raise HTTPException(401,"Invalid setup key.")
+    # All routes in this app are protected by the signed owner cookie middleware in private_app.py.
+    return None
 def creds():
     try:return int(os.environ["TELEGRAM_API_ID"]),os.environ["TELEGRAM_API_HASH"]
-    except Exception:raise HTTPException(500,"Set TELEGRAM_API_ID and TELEGRAM_API_HASH in this Render service first.")
+    except Exception:raise HTTPException(500,"Set TELEGRAM_API_ID and TELEGRAM_API_HASH in the Render service first.")
 class Start(BaseModel):
     phone:str
 class Verify(BaseModel):
