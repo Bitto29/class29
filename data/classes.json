@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:25:13.423076+00:00",
+  "updated_at": "2026-11-16T16:25:14.908159+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -412,6 +412,22 @@
               ],
               "video_id": "v6T0P-zrRJs",
               "url": "https://www.youtube.com/watch?v=v6T0P-zrRJs"
+            },
+            {
+              "id": "cv--1003026842244-844-YIYMCq8562o",
+              "source_key": "-1003026842244:844:YIYMCq8562o",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "BIOLOGY 1ST PAPER",
+              "date": "2026-05-07T04:40:06+00:00",
+              "telegram_message_id": 844,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1S3UaxgUb3K0zDR3u9lZi5ME1rljEhXGI?usp=drive_link",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "YIYMCq8562o",
+              "url": "https://www.youtube.com/watch?v=YIYMCq8562o"
             }
           ]
         },
