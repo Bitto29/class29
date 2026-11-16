@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:35.051326+00:00",
+  "updated_at": "2026-11-16T16:23:36.297223+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1926,6 +1926,22 @@
               ],
               "video_id": "KdmVtxJjrHw",
               "url": "https://www.youtube.com/watch?v=KdmVtxJjrHw"
+            },
+            {
+              "id": "cv--1003026842244-1039-vBTkxqqYO6A",
+              "source_key": "-1003026842244:1039:vBTkxqqYO6A",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "PHYSICS 1ST PAPER",
+              "date": "2026-05-07T10:47:50+00:00",
+              "telegram_message_id": 1039,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1Z165XB8QSKx9HAD0T0JIG_VyiyR1zhxd/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "vBTkxqqYO6A",
+              "url": "https://www.youtube.com/watch?v=vBTkxqqYO6A"
             }
           ]
         },
