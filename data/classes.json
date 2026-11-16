@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:32.388405+00:00",
+  "updated_at": "2026-11-16T16:19:33.613395+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -473,6 +473,20 @@
               ],
               "video_id": "0ytnhwSc6t8",
               "url": "https://www.youtube.com/watch?v=0ytnhwSc6t8"
+            },
+            {
+              "id": "cv--1004201359575-203-links",
+              "source_key": "-1004201359575:203:links",
+              "title": "PAID COURSE BANGLADESH",
+              "topic": "ICT",
+              "date": "2026-11-02T16:52:31+00:00",
+              "telegram_message_id": 203,
+              "resources": [
+                {
+                  "url": "https://t.me/c/4201359575/16/207",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         }
