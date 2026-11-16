@@ -14,28 +14,3 @@ services:
         sync: false
       - key: CLASS29_SITE_ORIGIN
         value: https://bitto29.github.io
-  - type: worker
-    name: class29-telegram-sync
-    runtime: python
-    rootDir: worker
-    buildCommand: pip install -r requirements.txt
-    startCommand: python listener.py
-    envVars:
-      - key: TELEGRAM_API_ID
-        sync: false
-      - key: TELEGRAM_API_HASH
-        sync: false
-      - key: TELEGRAM_PHONE
-        sync: false
-      - key: TELEGRAM_GROUPS_JSON
-        sync: false
-      - key: TELEGRAM_SESSION
-        sync: false
-      - key: GITHUB_TOKEN
-        sync: false
-      - key: GITHUB_REPOSITORY
-        value: Bitto29/class29
-      - key: GITHUB_BRANCH
-        value: main
-      - key: DATA_PATH
-        value: data/classes.json
