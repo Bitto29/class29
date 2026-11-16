@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:58.768721+00:00",
+  "updated_at": "2026-11-16T16:28:00.042689+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -6990,6 +6990,26 @@
               ],
               "video_id": "JO1CWtmMgRI",
               "url": "https://www.youtube.com/watch?v=JO1CWtmMgRI"
+            },
+            {
+              "id": "cv--1002935156662-3508-zGcURrfsIvY",
+              "source_key": "-1002935156662:3508:zGcURrfsIvY",
+              "title": "✪ 𝐑𝐄𝐕𝐈𝐒𝐈𝐎𝐍 𝐅𝐑𝐄𝐄 𝐂𝐎𝐔𝐑𝐒𝐄 ✪",
+              "topic": "ENGLISH ALL IN ONE",
+              "date": "2026-05-06T18:11:33+00:00",
+              "telegram_message_id": 3508,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1zMOBOcf9VzDRdu08a7dsr0DEz-Zhcyqx?usp=drive_link",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ],
+              "video_id": "zGcURrfsIvY",
+              "url": "https://www.youtube.com/watch?v=zGcURrfsIvY"
             }
           ]
         }
