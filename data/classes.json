@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:53.972826+00:00",
+  "updated_at": "2026-11-16T16:19:55.127711+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -90,6 +90,26 @@
                   "label": "Google Slides / Docs"
                 }
               ]
+            },
+            {
+              "id": "cv--1003026842244-1503-78T-_JHnv84",
+              "source_key": "-1003026842244:1503:78T-_JHnv84",
+              "title": "জ্যোতির্বিজ্ঞান",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-10-17T14:54:59+00:00",
+              "telegram_message_id": 1503,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/.../1bxl2nf-11H.../view",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1bxl2nf-11H_yO93Ig0XWqs2vTfcHpgSt/view?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExMms0UUZtRDBkS1lQOUxLSHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6YxXOShEg3CH4xdXfGynCljTh7jLQLANwNqzg85_WCr8HVksMRAFjkqdApjg_aem_3HxBVpGIpQZ3atpUvQ5N5Q",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "78T-_JHnv84",
+              "url": "https://www.youtube.com/watch?v=78T-_JHnv84"
             }
           ]
         }
