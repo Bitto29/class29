@@ -5,8 +5,8 @@ import httpx
 from dotenv import load_dotenv
 load_dotenv()
 
-YT=re.compile(r'(?:https?://)?(?:www\\.|m\\.)?(?:youtube\\.com/(?:watch\\?v=|shorts/|live/)|youtu\\.be/)([A-Za-z0-9_-]{11})',re.I)
-URL=re.compile(r'https?://[^\\s<>\\])}]+',re.I)
+YT=re.compile(r'(?:https?://)?(?:www\.|m\.)?(?:youtube\.com/(?:watch\?v=|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})',re.I)
+URL=re.compile(r'https?://[^\s<>\])}]+',re.I)
 
 def env(k):
  v=os.getenv(k)
@@ -72,8 +72,7 @@ class GitHubJSON:
     key=str(group_id)+':'+str(msgid)+':'+(vid or 'links')
     if any(x.get('source_key')==key for t in topics for x in t.get('classes',[])):return False
     item={'id':'cv-'+re.sub(r'[^a-zA-Z0-9_-]','-',key),'source_key':key,'title':title or ('Class '+vid if vid else 'Class materials'),'topic':topic,'date':date.isoformat() if date else now(),'telegram_message_id':msgid,'resources':resources or []}
-    if vid:
-     item.update({'video_id':vid,'url':'https://www.youtube.com/watch?v='+vid})
+    if vid:item.update({'video_id':vid,'url':'https://www.youtube.com/watch?v='+vid})
     section.setdefault('classes',[]).append(item)
     for t in topics:t['classes'].sort(key=lambda x:x.get('date',''),reverse=True)
     topics.sort(key=lambda x:x.get('name','').casefold());groups.sort(key=lambda x:x.get('name','').casefold())
