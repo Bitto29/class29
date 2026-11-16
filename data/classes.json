@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:09.576371+00:00",
+  "updated_at": "2026-11-16T16:27:11.206588+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2581,6 +2581,25 @@
                 },
                 {
                   "url": "https://drive.google.com/file/d/1YeErYsJTgr2cPHguYF-Sz2gz-MUbi0mb/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "COURSE MATERIALS FRB26",
+          "classes": [
+            {
+              "id": "cv--1003026842244-542-links",
+              "source_key": "-1003026842244:542:links",
+              "title": "BANGLA SUGGESTION : https://drive.google.com/file/d/1rdeTRkSi9Jd2Trd4TsGjVMQwpKuhkWrB/view?usp=sharing",
+              "topic": "COURSE MATERIALS FRB26",
+              "date": "2026-02-15T04:38:08+00:00",
+              "telegram_message_id": 542,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1rdeTRkSi9Jd2Trd4TsGjVMQwpKuhkWrB/view?usp=sharing",
                   "label": "Google Drive"
                 }
               ]
