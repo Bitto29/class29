@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:21:09.024860+00:00",
+  "updated_at": "2026-11-16T16:21:10.292234+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -554,6 +554,28 @@
               ],
               "video_id": "YPhW5ldrsDQ",
               "url": "https://www.youtube.com/watch?v=YPhW5ldrsDQ"
+            },
+            {
+              "id": "cv--1003026842244-1348-links",
+              "source_key": "-1003026842244:1348:links",
+              "title": "ᯓ➤ BIOLOGY 2ND PAPER INDEX",
+              "topic": "BIOLOGY 2ND PAPER",
+              "date": "2026-09-01T16:29:27+00:00",
+              "telegram_message_id": 1348,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1XXe7gW-M1vMTNdq9OidCwQdQjJaCNWu8/view?usp=sharing",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1-rwt9OCOZ263drXOVcDtbzi60CepbVYY/view?usp=sharing",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1mZJwG7YaIfh7M0rd3Jqz-quN3l0GS-tQ/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ]
             }
           ]
         },
