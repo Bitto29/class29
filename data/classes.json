@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:20.427496+00:00",
+  "updated_at": "2026-11-16T16:23:21.666150+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1715,6 +1715,56 @@
               "resources": [
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-1057-links",
+              "source_key": "-1003026842244:1057:links",
+              "title": "ᯓ➤ PHYSICS 1ST PAPER INDEX",
+              "topic": "PHYSICS 1ST PAPER",
+              "date": "2026-05-07T10:50:25+00:00",
+              "telegram_message_id": 1057,
+              "resources": [
+                {
+                  "url": "https://t.me/c/3026842244/8/1015",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1019",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1023",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1027",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1032",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1035",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1038",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1044",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1047",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/c/3026842244/8/1050",
                   "label": "t.me"
                 }
               ]
