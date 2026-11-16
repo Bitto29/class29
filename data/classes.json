@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:27:17.042990+00:00",
+  "updated_at": "2026-11-16T16:27:18.427438+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -2661,6 +2661,24 @@
               "topic": "COURSE MATERIALS FRB26",
               "date": "2026-01-01T06:34:02+00:00",
               "telegram_message_id": 452,
+              "resources": [
+                {
+                  "url": "https://t.me/FMBD01",
+                  "label": "t.me"
+                },
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1003026842244-451-links",
+              "source_key": "-1003026842244:451:links",
+              "title": "𝐅𝐑𝐄𝐄 𝐌𝐀𝐓𝐄𝐑𝐈𝐀𝐋𝐒 𝐁𝐀𝐍𝐆𝐋𝐀𝐃𝐄𝐒𝐇",
+              "topic": "COURSE MATERIALS FRB26",
+              "date": "2026-01-01T06:31:58+00:00",
+              "telegram_message_id": 451,
               "resources": [
                 {
                   "url": "https://t.me/FMBD01",
