@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:19:07.526845+00:00",
+  "updated_at": "2026-11-16T16:19:08.594693+00:00",
   "groups": [
     {
       "id": "-1004201359575",
@@ -40,6 +40,30 @@
               ],
               "video_id": "nczyTzaTMQs",
               "url": "https://www.youtube.com/watch?v=nczyTzaTMQs"
+            },
+            {
+              "id": "cv--1004201359575-305-oqTjB9Q7L98",
+              "source_key": "-1004201359575:305:oqTjB9Q7L98",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "BANGLA",
+              "date": "2026-11-11T09:25:26+00:00",
+              "telegram_message_id": 305,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1IUFluknoCezYhZc4jafCnhJO1ntAh8lO/view?usp=drivesdk",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1JF_NZqc3g9GZZlcGlQgU45s82aVZKp15/view",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/u/0/d/1Qwm_9Kw6LHM-50vI3eVqEtU0n8S6rnrD/view",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "oqTjB9Q7L98",
+              "url": "https://www.youtube.com/watch?v=oqTjB9Q7L98"
             }
           ]
         },
