@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:28:24.542439+00:00",
+  "updated_at": "2026-11-16T16:28:25.845372+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -6671,6 +6671,24 @@
                 {
                   "url": "https://t.me/FCBD_OFFICIAL",
                   "label": "t.me"
+                }
+              ]
+            },
+            {
+              "id": "cv--1002935156662-3487-links",
+              "source_key": "-1002935156662:3487:links",
+              "title": "🔴 POWERPLAY 2026 - FCBD 🔴",
+              "topic": "BANGLA ALL IN ONE",
+              "date": "2026-05-06T18:10:27+00:00",
+              "telegram_message_id": 3487,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1mQ7VV8L7OwbePJG263wTvzaIJOjQOQqw?usp=drive_link",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/drive/folders/1NyGZW024VwiDGDmE4Hbod94IUVEI1rDc?usp=drive_link",
+                  "label": "Google Drive"
                 }
               ]
             }
