@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:26:43.990727+00:00",
+  "updated_at": "2026-11-16T16:26:45.233580+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1699,6 +1699,24 @@
               ],
               "video_id": "M3gIYe9MEVs",
               "url": "https://www.youtube.com/watch?v=M3gIYe9MEVs"
+            },
+            {
+              "id": "cv--1003026842244-727-links",
+              "source_key": "-1003026842244:727:links",
+              "title": "ᯓ➤ CHEMISTRY 1ST PAPER INDEX",
+              "topic": "CHEMISTRY 1ST PAPER",
+              "date": "2026-05-07T02:56:53+00:00",
+              "telegram_message_id": 727,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1aSHlFcGqfId3uZRk2ISwmV6AfqsCCwLg/view?usp=sharing",
+                  "label": "Google Drive"
+                },
+                {
+                  "url": "https://drive.google.com/file/d/1eOyiY6DrEb6Qs81JTjkZLBnozT333Y7V/view?usp=sharing",
+                  "label": "Google Drive"
+                }
+              ]
             }
           ]
         },
