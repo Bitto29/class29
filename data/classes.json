@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:57.700552+00:00",
+  "updated_at": "2026-11-16T16:23:58.842604+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -3210,6 +3210,20 @@
               ],
               "video_id": "3EPu1DyLBHw",
               "url": "https://www.youtube.com/watch?v=3EPu1DyLBHw"
+            },
+            {
+              "id": "cv--1003026842244-1010-links",
+              "source_key": "-1003026842244:1010:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "PHYSICS 2ND PAPER",
+              "date": "2026-05-07T10:31:40+00:00",
+              "telegram_message_id": 1010,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         }
