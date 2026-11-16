@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:23:19.163499+00:00",
+  "updated_at": "2026-11-16T16:23:20.427496+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -1699,6 +1699,25 @@
               "resources": [],
               "video_id": "67B9P3TgKa8",
               "url": "https://www.youtube.com/watch?v=67B9P3TgKa8"
+            }
+          ]
+        },
+        {
+          "name": "PHYSICS 1ST PAPER",
+          "classes": [
+            {
+              "id": "cv--1003026842244-1058-links",
+              "source_key": "-1003026842244:1058:links",
+              "title": "যদি এই ক্লাস গুলো দেওয়ার মাধ‍্যমে তোমাদের কোনো উপকার করতে পারছি বলে মনে করো। তাহলে অবশ‍্যই নিচের চ‍্যানেলে যুক্ত হয় যাও আর কোনো কিছুই দরকার ",
+              "topic": "PHYSICS 1ST PAPER",
+              "date": "2026-05-07T10:51:54+00:00",
+              "telegram_message_id": 1058,
+              "resources": [
+                {
+                  "url": "https://t.me/FCBD_OFFICIAL",
+                  "label": "t.me"
+                }
+              ]
             }
           ]
         },
