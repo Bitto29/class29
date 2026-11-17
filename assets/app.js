@@ -6,6 +6,36 @@ const pad = n => String(n).padStart(2, '0');
 const seenSet = () => { try { return new Set(JSON.parse(localStorage.getItem('c29seen') || '[]')); } catch { return new Set(); } };
 const markSeen = id => { try { const s = seenSet(); s.add(id); localStorage.setItem('c29seen', JSON.stringify([...s])); } catch { } };
 
+// Per-device new-class notifications. First visit creates a quiet baseline.
+let newClassIds = new Set();
+const readNewClassIds = () => { try { return new Set(JSON.parse(localStorage.getItem('c29newClassIds') || '[]')); } catch { return new Set(); } };
+const saveNewClassIds = () => { try { localStorage.setItem('c29newClassIds', JSON.stringify([...newClassIds])); } catch {} };
+function syncNewClassIds() {
+  const current = lib.groups.flatMap(g => g.topics.flatMap(t => t.classes.filter(c => c.video_id).map(c => c.id)));
+  try {
+    const raw = localStorage.getItem('c29knownClassIds');
+    if (raw === null) {
+      localStorage.setItem('c29knownClassIds', JSON.stringify(current));
+      newClassIds = new Set();
+      return;
+    }
+    const known = new Set(JSON.parse(raw));
+    newClassIds = readNewClassIds();
+    current.forEach(id => { if (!known.has(id)) newClassIds.add(id); });
+    localStorage.setItem('c29knownClassIds', JSON.stringify(current));
+    saveNewClassIds();
+  } catch { newClassIds = new Set(); }
+}
+const newCount = videos => (videos || []).reduce((n, c) => n + (newClassIds.has(c.id) ? 1 : 0), 0);
+function newBadge(count) {
+  return count ? `<span class="new-badge" aria-label="${count} new classes">${count > 99 ? '99+' : count}</span>` : '';
+}
+function acknowledgeSubject(t) {
+  (t.videos || []).forEach(c => newClassIds.delete(c.id));
+  saveNewClassIds();
+}
+
+
 // Channel banners repeat across hundreds of posts, so they are not real class names.
 const isGeneric = t => /PAID COURSE|FREE COURSE|FREE & PAID|FREE MATERIALS|COURSE MATERIALS|\bFCBD\b|\bPCBD\b|ACS FRB|POWERPLAY|\bUDVASH\b|\bINDEX\b|যদি এই ক্লাস|চ্যানেলে যুক্ত|JOIN|SUBSCRIBE/i.test(String(t || '').normalize('NFKC'));
 const byTime = (a, b) => (a.date || '').localeCompare(b.date || '') || (a.telegram_message_id - b.telegram_message_id);
@@ -50,7 +80,8 @@ function home() {
       out.innerHTML = '<div class="grid">' + lib.groups.map((g, gi) => {
         const v = g.topics.reduce((n, t) => n + t.videos.length, 0);
         const cover = groupCover(g);
-        return `<a class="card" href="#/g/${gi}">${cover ? `<img class="group-cover" src="${esc(cover)}" alt="" loading="lazy" decoding="async">` : `<div class="ico">${esc(g.name.trim().slice(0, 2).toUpperCase())}</div>`}<h3>${esc(g.name)}</h3><div class="meta"><span class="pill">${g.topics.length} subjects</span><span class="pill m">${v} classes</span></div></a>`;
+        const fresh = g.topics.reduce((n, t) => n + newCount(t.videos), 0);
+        return `<a class="card" href="#/g/${gi}">${cover ? `<img class="group-cover" src="${esc(cover)}" alt="" loading="lazy" decoding="async">` : `<div class="ico">${esc(g.name.trim().slice(0, 2).toUpperCase())}</div>`}${newBadge(fresh)}<h3>${esc(g.name)}</h3><div class="meta"><span class="pill">${g.topics.length} subjects</span><span class="pill m">${v} classes</span></div></a>`;
       }).join('') + '</div>';
       return;
     }
@@ -70,11 +101,12 @@ function row(c, sub, on, seen) {
 function group(gi) {
   const g = lib.groups[gi]; if (!g) return notFound();
   $app.innerHTML = crumbs([['Home', '#/'], [g.name]]) + `<div class="eyebrow">Group</div><h1 style="font-size:clamp(26px,4vw,40px)">${esc(g.name)}</h1><p class="sub">${g.topics.length} subjects</p>
-  <div class="grid">${g.topics.map((t, ti) => `<a class="card" href="#/g/${gi}/t/${ti}"><div class="ico">${esc(t.name.trim().slice(0, 2).toUpperCase())}</div><h3>${esc(t.name)}</h3><div class="meta"><span class="pill m">${t.videos.length} classes</span>${t.materials.length ? `<span class="pill">${t.materials.length} materials</span>` : ''}${t.last ? `<span class="pill">${fmt(t.last)}</span>` : ''}</div></a>`).join('')}</div>`;
+  <div class="grid">${g.topics.map((t, ti) => `<a class="card" href="#/g/${gi}/t/${ti}"><div class="ico">${esc(t.name.trim().slice(0, 2).toUpperCase())}</div>${newBadge(newCount(t.videos))}<h3>${esc(t.name)}</h3><div class="meta"><span class="pill m">${t.videos.length} classes</span>${t.materials.length ? `<span class="pill">${t.materials.length} materials</span>` : ''}${t.last ? `<span class="pill">${fmt(t.last)}</span>` : ''}</div></a>`).join('')}</div>`;
 }
 
 function subject(gi, ti) {
   const g = lib.groups[gi], t = g?.topics[ti]; if (!t) return notFound();
+  acknowledgeSubject(t);
   const seen = seenSet();
   $app.innerHTML = crumbs([['Home', '#/'], [g.name, '#/g/' + gi], [t.name]]) + `<div class="eyebrow">Subject</div><h1 style="font-size:clamp(26px,4vw,40px)">${esc(t.name)}</h1><p class="sub">${t.videos.length} classes</p>
   <div class="list">${t.videos.map(c => row(c, fmt(c.date), false, seen)).join('') || '<div class="empty">No video classes yet.</div>'}</div>
@@ -185,6 +217,7 @@ function route() {
     lib = await r.json(); lib.groups = lib.groups || [];
     lib.groups.forEach(g => g.topics = g.topics || []); lib.groups.forEach(g => g.topics.forEach(t => t.classes = t.classes || []));
     prepare();
+    syncNewClassIds();
     document.getElementById('updated').textContent = lib.updated_at ? 'Updated ' + fmt(lib.updated_at) : '';
     addEventListener('hashchange', route); route();
   } catch (e) { $app.innerHTML = '<div class="empty">Library data could not be loaded. Refresh later.</div>'; }
