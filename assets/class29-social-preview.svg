@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152d"/><stop offset=".55" stop-color="#081126"/><stop offset="1" stop-color="#020711"/></linearGradient>
+ <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5be9ff"/><stop offset=".5" stop-color="#197cff"/><stop offset="1" stop-color="#15d9c5"/></linearGradient>
+ <linearGradient id="white" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#9edfff"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#0b5bb9" stop-opacity=".45"/><stop offset="1" stop-color="#07152d" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<ellipse cx="910" cy="120" rx="440" ry="300" fill="url(#halo)"/>
+<ellipse cx="210" cy="520" rx="330" ry="220" fill="#073d86" opacity=".28" filter="url(#blur)"/>
+<path d="M0 0H1200V12H0Z" fill="url(#blue)"/>
+<g opacity=".13" stroke="#43baff" fill="none" stroke-width="3">
+ <path d="M80 112h75v65H80zM96 130h43M96 145h43M96 160h28"/>
+ <circle cx="1065" cy="130" r="42"/><path d="M1065 88v84M1023 130h84M1035 100l60 60M1095 100l-60 60"/>
+ <path d="M1030 420h24v64h-24zM1067 390h24v94h-24zM1104 355h24v129h-24z"/>
+</g>
+<g transform="translate(82 142)">
+ <rect width="330" height="330" rx="76" fill="#071a3a" stroke="url(#blue)" stroke-width="6"/>
+ <circle cx="165" cy="154" r="111" fill="#081d42" stroke="#1555a5" stroke-width="3"/>
+ <path d="M78 130Q120 111 165 144Q210 111 252 130V230Q208 209 165 248Q122 209 78 230Z" fill="#0875df" opacity=".55"/>
+ <path d="M91 118Q130 104 165 133V227Q128 197 91 212Z" fill="url(#white)"/>
+ <path d="M239 118Q200 104 165 133V227Q202 197 239 212Z" fill="url(#white)"/>
+ <path d="M165 134V229" stroke="#36caff" stroke-width="5"/>
+ <path d="M150 158v42q0 9 10 4l39-21q10-5 0-10l-39-20q-10-5-10 5" fill="#0754d9"/>
+ <path d="M209 108v47l14-11 14 11v-47" fill="#13c6ed"/>
+ <text x="165" y="288" fill="#f5f9ff" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="700">Class <tspan fill="#28caff">29</tspan></text>
+</g>
+<g transform="translate(500 180)">
+ <text x="0" y="20" fill="#8eeaff" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="5">YOUR HSC STUDY SPACE</text>
+ <text x="0" y="125" fill="#f4f8ff" font-family="Arial,sans-serif" font-size="100" font-weight="800" letter-spacing="-4">Class <tspan fill="#29caff">29</tspan></text>
+ <rect x="0" y="160" width="105" height="6" rx="3" fill="url(#blue)"/>
+ <text x="0" y="220" fill="#b9c8df" font-family="Arial,sans-serif" font-size="29">Classes, subjects and study materials</text>
+ <text x="0" y="265" fill="#b9c8df" font-family="Arial,sans-serif" font-size="29">organized in one simple place.</text>
+ <g transform="translate(0 330)">
+  <rect width="360" height="62" rx="31" fill="#102342" stroke="#28538b" stroke-width="2"/>
+  <circle cx="32" cy="31" r="8" fill="#29d5ee"/>
+  <text x="58" y="40" fill="#e6f4ff" font-family="Arial,sans-serif" font-size="23">bitto29.github.io/class29</text>
+ </g>
+</g>
+</svg>
