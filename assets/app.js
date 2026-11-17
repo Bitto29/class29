@@ -7,7 +7,7 @@ const seenSet = () => { try { return new Set(JSON.parse(localStorage.getItem('c2
 const markSeen = id => { try { const s = seenSet(); s.add(id); localStorage.setItem('c29seen', JSON.stringify([...s])); } catch { } };
 
 // Channel banners repeat across hundreds of posts, so they are not real class names.
-const isGeneric = t => /PAID COURSE|FREE COURSE|FREE & PAID|FREE MATERIALS|COURSE MATERIALS|\\bFCBD\\b|\\bPCBD\\b|ACS FRB|POWERPLAY|\\bUDVASH\\b|\\bINDEX\\b|যদি এই ক্লাস|চ্যানেলে যুক্ত|JOIN|SUBSCRIBE/i.test(String(t || '').normalize('NFKC'));
+const isGeneric = t => /PAID COURSE|FREE COURSE|FREE & PAID|FREE MATERIALS|COURSE MATERIALS|\bFCBD\b|\bPCBD\b|ACS FRB|POWERPLAY|\bUDVASH\b|\bINDEX\b|যদি এই ক্লাস|চ্যানেলে যুক্ত|JOIN|SUBSCRIBE/i.test(String(t || '').normalize('NFKC'));
 const byTime = (a, b) => (a.date || '').localeCompare(b.date || '') || (a.telegram_message_id - b.telegram_message_id);
 
 function prepare() {
