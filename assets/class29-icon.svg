@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102b59"/><stop offset=".55" stop-color="#07152f"/><stop offset="1" stop-color="#030916"/></linearGradient>
+ <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6deaff"/><stop offset=".45" stop-color="#1677ff"/><stop offset="1" stop-color="#25e0d0"/></linearGradient>
+ <linearGradient id="page" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#8edaff"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="512" height="512" rx="118" fill="#030916"/>
+<rect x="19" y="19" width="474" height="474" rx="106" fill="url(#bg)" stroke="url(#rim)" stroke-width="8"/>
+<circle cx="256" cy="245" r="164" fill="#071a3c" stroke="#1455a9" stroke-width="3"/>
+<g filter="url(#glow)" transform="translate(0 6)">
+ <path d="M100 196Q178 165 256 220Q334 165 412 196V344Q332 315 256 370Q180 315 100 344Z" fill="#0875df" opacity=".45"/>
+ <path d="M119 176Q187 151 256 202V344Q184 294 119 320Z" fill="url(#page)" stroke="#d5f5ff" stroke-width="5" stroke-linejoin="round"/>
+ <path d="M393 176Q325 151 256 202V344Q328 294 393 320Z" fill="url(#page)" stroke="#d5f5ff" stroke-width="5" stroke-linejoin="round"/>
+ <path d="M256 203V347" stroke="#38baff" stroke-width="6" stroke-linecap="round"/>
+ <path d="M230 239L230 301Q230 315 245 307L302 278Q318 270 302 261L245 233Q230 225 230 239Z" fill="#0754d9"/>
+ <path d="M340 154V226L360 210L380 226V154Z" fill="#08b9ec" stroke="#6cecff" stroke-width="3"/>
+</g>
+<path d="M112 379Q184 353 256 397Q328 353 400 379" fill="none" stroke="url(#rim)" stroke-width="8" stroke-linecap="round"/>
+</svg>
