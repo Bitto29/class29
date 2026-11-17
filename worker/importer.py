@@ -2,7 +2,7 @@ import asyncio,os
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.tl.functions.messages import GetForumTopicsRequest
-from common import env,configured_groups,GitHubJSON,video_ids,extract_links
+from common import env,configured_groups,GitHubJSON,video_ids,extract_links,pick_title
 
 async def get_topics(c,group):
  topics=[];offset=0
@@ -29,7 +29,7 @@ async def main():
      text=m.message or '';ids=video_ids(text);resources=extract_links(m)
      if not ids and not resources:continue
      lines=[x.strip() for x in text.splitlines() if x.strip()]
-     title=(lines[0][:140] if lines else 'Class in '+topic.title)
+     title=pick_title(text,topic.title) or (lines[0][:140] if lines else 'Class in '+topic.title)
      if ids:
       for vid in ids:await writer.add(cfg['id'],name,topic.title,title,vid,resources,m.date,m.id)
      else:
