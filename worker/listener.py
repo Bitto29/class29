@@ -2,7 +2,7 @@ import asyncio,os
 from telethon import TelegramClient,events
 from telethon.sessions import StringSession
 from telethon.tl.functions.channels import GetForumTopicsRequest
-from common import env,configured_groups,GitHubJSON,video_ids,extract_links
+from common import env,configured_groups,GitHubJSON,video_ids,extract_links,pick_title
 
 async def main():
  c=TelegramClient(StringSession(env('TELEGRAM_SESSION')),int(env('TELEGRAM_API_ID')),env('TELEGRAM_API_HASH'))
@@ -23,8 +23,7 @@ async def main():
     if not ids and not resources:return
     top=getattr(m,'reply_to_top_id',None) or getattr(m,'reply_to_msg_id',None)
     topic=topic_map.get(top,'General')
-    lines=[x.strip() for x in text.splitlines() if x.strip()]
-    title=(lines[0][:140] if lines else 'Class materials')
+    title=pick_title(text,topic) or 'Class materials'
     try:
      if ids:
       for vid in ids:await writer.add(group_id,group_name,topic,title,vid,resources,m.date,m.id)
