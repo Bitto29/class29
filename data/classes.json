@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-16T16:37:42.796921+00:00",
+  "updated_at": "2026-11-17T00:11:09.582068+00:00",
   "groups": [
     {
       "id": "-1003026842244",
@@ -6484,6 +6484,17 @@
           "name": "General",
           "classes": [
             {
+              "id": "cv--1004201359575-336-Is0Q8N89j6c",
+              "source_key": "-1004201359575:336:Is0Q8N89j6c",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "General",
+              "date": "2026-11-16T17:53:52+00:00",
+              "telegram_message_id": 336,
+              "resources": [],
+              "video_id": "Is0Q8N89j6c",
+              "url": "https://www.youtube.com/watch?v=Is0Q8N89j6c"
+            },
+            {
               "id": "cv--1004201359575-288-VuDh0_dRJCw",
               "source_key": "-1004201359575:288:VuDh0_dRJCw",
               "title": "✅ Gerund & Participle এর সবকিছু।",
@@ -6648,6 +6659,27 @@
               ],
               "video_id": "5Qmh_ePR0Ig",
               "url": "https://www.youtube.com/watch?v=5Qmh_ePR0Ig"
+            }
+          ]
+        },
+        {
+          "name": "ENGLISH",
+          "classes": [
+            {
+              "id": "cv--1003984486117-99-jPv6RaghK44",
+              "source_key": "-1003984486117:99:jPv6RaghK44",
+              "title": "✪ 𝐅𝐑𝐄𝐄 & 𝐏𝐀𝐈𝐃 𝐂𝐎𝐔𝐑𝐒𝐄 𝐁𝐃 ✪",
+              "topic": "ENGLISH",
+              "date": "2026-11-16T17:47:17+00:00",
+              "telegram_message_id": 99,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1Abi7Oie8QMRwVXNHmJ5_hxZXnVhrOiWI/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "jPv6RaghK44",
+              "url": "https://www.youtube.com/watch?v=jPv6RaghK44"
             }
           ]
         }
