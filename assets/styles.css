@@ -88,3 +88,18 @@ body { overflow-x:hidden; }
   .shell { padding-inline:12px; }
   .nav .btn { font-size:11px; padding-inline:7px; }
 }
+
+
+/* Homepage course group thumbnails */
+.group-cover {
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:12px;
+  background:#14243a;
+  border:1px solid #ffffff12;
+}
+.card:has(.group-cover) { padding:14px; }
+.card:has(.group-cover) h3 { padding:0 5px; }
+.card:has(.group-cover) .meta { padding:0 5px 3px; }
