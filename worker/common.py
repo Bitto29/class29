@@ -3,6 +3,7 @@ import re
 import json
 import base64
 import asyncio
+import unicodedata
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
@@ -39,6 +40,58 @@ def configured_groups():
             "name": str(item.get("name") or item["id"]),
         })
     return clean
+
+
+BANNER = re.compile(
+    r"PAID COURSE|FREE COURSE|FREE & PAID|FREE MATERIALS|COURSE MATERIALS|"
+    r"\bFCBD\b|\bPCBD\b|ACS FRB|POWERPLAY|UDVASH|\bINDEX\b|"
+    r"যদি এই ক্লাস|চ্যানেলে যুক্ত|JOIN|SUBSCRIBE",
+    re.I,
+)
+
+
+def clean_line(line):
+    """Normalise fancy Unicode letters and strip decorative symbols."""
+    line = unicodedata.normalize("NFKC", line or "")
+    line = re.sub(r"^[^\w\u0980-\u09FF(\[]+", "", line)
+    line = re.sub(r"[^\w\u0980-\u09FF)\].!?]+$", "", line)
+    return line.strip()
+
+
+def is_banner(title):
+    t = clean_line(title)
+    return (not t) or bool(BANNER.search(unicodedata.normalize("NFKC", title or "")))
+
+
+def pick_title(text, topic=""):
+    """First real line of the admin's message, skipping channel banners and bare links."""
+    good = []
+    for raw in (text or "").splitlines():
+        if not raw.strip() or URL.fullmatch(raw.strip()):
+            continue
+        if URL.search(raw) and len(URL.sub("", raw).strip()) < 4:
+            continue
+        line = clean_line(URL.sub("", raw))
+        if len(line) < 3 or is_banner(raw):
+            continue
+        good.append(line[:140])
+    for line in good:
+        if line.casefold() != (topic or "").casefold():
+            return line
+    return good[0] if good else ""
+
+
+async def youtube_title(client, video_id):
+    try:
+        r = await client.get(
+            "https://www.youtube.com/oembed",
+            params={"url": "https://www.youtube.com/watch?v=" + video_id, "format": "json"},
+        )
+        if r.status_code == 200:
+            return (r.json().get("title") or "").strip()[:140]
+    except Exception:
+        pass
+    return ""
 
 
 def video_ids(text):
@@ -150,6 +203,8 @@ class GitHubJSON:
                 group_map = {str(group.get("id")): group for group in groups}
                 topic_maps = {}
                 existing_keys = set()
+                existing_items = {}
+                changed = 0
 
                 for group in groups:
                     topic_map = {
@@ -162,6 +217,7 @@ class GitHubJSON:
                             source_key = item.get("source_key")
                             if source_key:
                                 existing_keys.add(source_key)
+                                existing_items[source_key] = item
 
                 added = 0
                 for entry in entries:
@@ -171,6 +227,10 @@ class GitHubJSON:
 
                     key, item = self._class_item(entry)
                     if key in existing_keys:
+                        old = existing_items.get(key)
+                        if old and is_banner(old.get("title")) and not is_banner(item["title"]):
+                            old["title"] = item["title"]
+                            changed += 1
                         continue
 
                     group = group_map.get(group_id)
@@ -195,9 +255,28 @@ class GitHubJSON:
 
                     topic.setdefault("classes", []).append(item)
                     existing_keys.add(key)
+                    existing_items[key] = item
                     added += 1
 
-                if added == 0:
+                # Still a channel banner? Use the YouTube video's own title.
+                todo = [
+                    it for it in existing_items.values()
+                    if it.get("video_id") and is_banner(it.get("title")) and not it.get("yt_checked")
+                ]
+                if todo:
+                    sem = asyncio.Semaphore(8)
+
+                    async def fill(it):
+                        async with sem:
+                            t = await youtube_title(client, it["video_id"])
+                        if t:
+                            it["title"] = t
+                        it["yt_checked"] = True
+
+                    await asyncio.gather(*(fill(it) for it in todo))
+                    changed += len(todo)
+
+                if added == 0 and changed == 0:
                     print("No new Telegram entries. Existing data is up to date.")
                     return 0
 
@@ -233,7 +312,7 @@ class GitHubJSON:
                     await asyncio.sleep(0.8 * (attempt + 1))
                     continue
                 response.raise_for_status()
-                print(f"Saved {added} new class/resource entries in one GitHub update.")
+                print(f"Saved {added} new and {changed} updated class/resource entries in one GitHub update.")
                 return added
 
         raise RuntimeError("GitHub JSON batch update failed after retries")
