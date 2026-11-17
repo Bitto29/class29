@@ -156,3 +156,28 @@ body { overflow-x:hidden; }
   .nav .btn:last-child { justify-self:stretch; }
   .nav .fs-btn { font-size:20px; padding:8px 3px; }
 }
+
+
+/* New class notification badges */
+.card { position:relative; }
+.new-badge {
+  position:absolute;
+  top:12px;
+  right:12px;
+  min-width:25px;
+  height:25px;
+  padding:0 7px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background:#ff4f67;
+  color:#fff;
+  border:2px solid var(--card);
+  font-size:11px;
+  line-height:1;
+  font-weight:800;
+  box-shadow:0 3px 12px #ff4f6738;
+  z-index:2;
+}
+.card:has(.group-cover) .new-badge { top:22px; right:22px; }
