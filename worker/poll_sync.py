@@ -1,4 +1,5 @@
 import asyncio
+import os
 
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -10,6 +11,7 @@ from common import (
     GitHubJSON,
     video_ids,
     extract_links,
+    pick_title,
 )
 
 
@@ -59,7 +61,7 @@ async def main():
             print(f"Checking {cfg['name']} ({len(topics)} topics)")
 
             count = 0
-            async for message in client.iter_messages(group, limit=500):
+            async for message in client.iter_messages(group, limit=int(os.getenv("SYNC_LIMIT", "500"))):
                 message_text = message.message or ""
                 ids = video_ids(message_text)
                 resources = extract_links(message)
@@ -77,7 +79,7 @@ async def main():
                     for line in message_text.splitlines()
                     if line.strip()
                 ]
-                title = lines[0][:140] if lines else "Class materials"
+                title = pick_title(message_text, topic) or (lines[0][:140] if lines else "Class materials")
 
                 # One Telegram message can contain more than one YouTube URL.
                 video_values = ids or [None]
