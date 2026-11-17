@@ -89,10 +89,36 @@ function watch(id) {
   $app.innerHTML = crumbs([['Home', '#/'], [g.name, '#/g/' + gi], [t.name, `#/g/${gi}/t/${ti}`], [c.label]]) + `<div class="watch"><div>
   <h1 style="font-size:clamp(22px,3.5vw,32px);letter-spacing:-.5px">${esc(c.label)}</h1>
   <p class="sub">${esc(t.name)} · ${fmt(c.date)}</p>
-  ${c.video_id ? `<div class="player"><iframe title="Class video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.video_id)}?rel=0"></iframe></div>
-  <div class="nav"><a class="btn ${prev ? '' : 'off'}" ${link(prev)}>← Previous</a><a class="btn" target="_blank" rel="noopener" href="${esc(c.url)}">YouTube ↗</a><a class="btn ${next ? '' : 'off'}" ${link(next)}>Next →</a></div>` : ''}
+  ${c.video_id ? `<div class="player" id="class-player"><iframe title="Class video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.video_id)}?rel=0&playsinline=1"></iframe></div>
+  <div class="nav"><a class="btn ${prev ? '' : 'off'}" ${link(prev)}>← Previous</a><a class="btn" target="_blank" rel="noopener" href="${esc(c.url)}">YouTube ↗</a><a class="btn ${next ? '' : 'off'}" ${link(next)}>Next →</a><button class="btn fs-btn" id="class-fullscreen" type="button" aria-label="Enter fullscreen" title="Fullscreen">⛶</button></div>` : ''}
   ${(c.resources || []).length ? '<h2>Class materials</h2>' + c.resources.map(r => `<a class="res" target="_blank" rel="noopener noreferrer" href="${esc(r.url)}">↗ ${esc(r.label || 'Open')} — ${esc(r.url.replace(/^https?:\/\//, '').slice(0, 60))}</a>`).join('') : ''}
   </div><aside class="side"><div class="eyebrow" style="margin-bottom:10px">${esc(t.name)}</div><div class="list">${t.videos.map(v => row(v, fmt(v.date), v === c, seen)).join('')}</div></aside></div>`;
+  const fsButton = $app.querySelector('#class-fullscreen');
+  fsButton?.addEventListener('click', async () => {
+    const player = $app.querySelector('#class-player');
+    if (!player) return;
+    try {
+      if (document.fullscreenElement === player) {
+        await document.exitFullscreen();
+        return;
+      }
+      const request = player.requestFullscreen || player.webkitRequestFullscreen;
+      if (!request) {
+        fsButton.textContent = 'Unavailable';
+        return;
+      }
+      const enter = request.call(player);
+      // Lock to landscape on Android browsers that support orientation locking.
+      try {
+        await enter;
+        if (screen.orientation?.lock) await screen.orientation.lock('landscape');
+      } catch (error) {
+        // Fullscreen can still work when orientation locking is unsupported.
+      }
+    } catch (error) {
+      console.warn('Fullscreen could not be started:', error);
+    }
+  });
   document.title = c.label + ' · Class 29';
 }
 
@@ -118,3 +144,18 @@ function route() {
     addEventListener('hashchange', route); route();
   } catch (e) { $app.innerHTML = '<div class="empty">Library data could not be loaded. Refresh later.</div>'; }
 })();
+
+
+document.addEventListener('fullscreenchange', () => {
+  const player = document.querySelector('#class-player');
+  const button = document.querySelector('#class-fullscreen');
+  const active = !!player && document.fullscreenElement === player;
+  if (button) {
+    button.textContent = active ? '✕' : '⛶';
+    button.setAttribute('aria-label', active ? 'Exit fullscreen' : 'Enter fullscreen');
+    button.title = active ? 'Exit fullscreen' : 'Fullscreen';
+  }
+  if (!active) {
+    try { screen.orientation?.unlock?.(); } catch (error) { /* optional browser feature */ }
+  }
+});
