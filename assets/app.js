@@ -79,6 +79,7 @@ function subject(gi, ti) {
   $app.innerHTML = crumbs([['Home', '#/'], [g.name, '#/g/' + gi], [t.name]]) + `<div class="eyebrow">Subject</div><h1 style="font-size:clamp(26px,4vw,40px)">${esc(t.name)}</h1><p class="sub">${t.videos.length} classes</p>
   <div class="list">${t.videos.map(c => row(c, fmt(c.date), false, seen)).join('') || '<div class="empty">No video classes yet.</div>'}</div>
   ${t.materials.length ? '<h2>Materials</h2>' + t.materials.map(m => (m.resources || []).map(r => `<a class="res" target="_blank" rel="noopener noreferrer" href="${esc(r.url)}">↗ ${esc(isGeneric(m.title) ? (r.label || 'Open') : m.title)}</a>`).join('')).join('') : ''}`;
+  resolveYouTubeTitles(t.videos);
 }
 
 const videoTitleCache = new Map();
