@@ -24,6 +24,19 @@ function prepare() {
 
 const crumbs = list => '<nav class="crumbs">' + list.map((x, i) => x[1] ? `<a href="${x[1]}">${esc(x[0])}</a>` : `<span>${esc(x[0])}</span>`).join('<span>›</span>') + '</nav>';
 
+const groupCovers = {
+  'PCBD - ( POWERPLAY 27 )': 'https://wntfkemvohfazlckrncj.supabase.co/storage/v1/object/sign/course-thumbnails/ec3d9c6d-6768-4aa0-af63-b2a062ec1dcd.jpg?token=eyJraWQiOiJjZmUyZDg3Yy1iMWYyLTQzYTctOWI3Ni1mYTA2ZmY1ZTAzOWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjb3Vyc2UtdGh1bWJuYWlscy9lYzNkOWM2ZC02NzY4LTRhYTAtYWY2My1iMmEwNjJlYzFkY2QuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MTQ3NzI4NiwiZXhwIjoyMTA2ODM3Mjg2fQ.DwxGDdw6OoDvdgspZwARQ57pFg9-NYGuwGoX86SSqYk',
+  'PCBD - ( ACS FRB 27 )': 'https://wntfkemvohfazlckrncj.supabase.co/storage/v1/object/sign/course-thumbnails/56e4c4b3-19a0-43a7-a716-0fd659c69e04.jpg?token=eyJraWQiOiJjZmUyZDg3Yy1iMWYyLTQzYTctOWI3Ni1mYTA2ZmY1ZTAzOWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjb3Vyc2UtdGh1bWJuYWlscy81NmU0YzRiMy0xOWEwLTQzYTctYTcxNi0wZmQ2NTljNjllMDQuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MDQ1NzE3MiwiZXhwIjoyMTA1ODE3MTcyfQ.mzStomWHvbIz0I-a-mdesqRRhwKx-VCVasmxFUL0FP4'
+};
+function groupCover(g) {
+  if (groupCovers[g.name]) return groupCovers[g.name];
+  for (const topic of (g.topics || [])) {
+    const video = (topic.classes || []).find(c => c.video_id);
+    if (video) return 'https://i.ytimg.com/vi/' + encodeURIComponent(video.video_id) + '/hqdefault.jpg';
+  }
+  return '';
+}
+
 function home() {
   const q = ($app.querySelector('#q')?.value || '').trim().toLowerCase();
   const total = lib.groups.reduce((n, g) => n + g.topics.reduce((m, t) => m + t.videos.length, 0), 0);
@@ -36,7 +49,8 @@ function home() {
     if (!s) {
       out.innerHTML = '<div class="grid">' + lib.groups.map((g, gi) => {
         const v = g.topics.reduce((n, t) => n + t.videos.length, 0);
-        return `<a class="card" href="#/g/${gi}"><div class="ico">${esc(g.name.trim().slice(0, 2).toUpperCase())}</div><h3>${esc(g.name)}</h3><div class="meta"><span class="pill">${g.topics.length} subjects</span><span class="pill m">${v} classes</span></div></a>`;
+        const cover = groupCover(g);
+        return `<a class="card" href="#/g/${gi}">${cover ? `<img class="group-cover" src="${esc(cover)}" alt="" loading="lazy" decoding="async">` : `<div class="ico">${esc(g.name.trim().slice(0, 2).toUpperCase())}</div>`}<h3>${esc(g.name)}</h3><div class="meta"><span class="pill">${g.topics.length} subjects</span><span class="pill m">${v} classes</span></div></a>`;
       }).join('') + '</div>';
       return;
     }
