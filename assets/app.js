@@ -64,7 +64,7 @@ function home() {
 function row(c, sub, on, seen) {
   const thumb = c.video_id ? `<img class="thumb" loading="lazy" alt="" src="https://i.ytimg.com/vi/${encodeURIComponent(c.video_id)}/mqdefault.jpg">` : `<span class="num">↗</span>`;
   const no = c.n ? '#' + pad(c.n) + ' · ' : '';
-  return `<a class="item ${on ? 'on' : ''} ${seen && seen.has(c.id) ? 'seen' : ''}" href="#/c/${encodeURIComponent(c.id)}">${thumb}<span class="t"><strong>${esc(c.label)}</strong><small>${esc(no + (sub || fmt(c.date)))}</small></span></a>`;
+  return `<a class="item ${on ? 'on' : ''} ${seen && seen.has(c.id) ? 'seen' : ''}" href="#/c/${encodeURIComponent(c.id)}">${thumb}<span class="t"><strong data-video-title-id="${esc(c.video_id || '')}">${esc(c.label)}</strong><small>${esc(no + (sub || fmt(c.date)))}</small></span></a>`;
 }
 
 function group(gi) {
@@ -81,13 +81,56 @@ function subject(gi, ti) {
   ${t.materials.length ? '<h2>Materials</h2>' + t.materials.map(m => (m.resources || []).map(r => `<a class="res" target="_blank" rel="noopener noreferrer" href="${esc(r.url)}">↗ ${esc(isGeneric(m.title) ? (r.label || 'Open') : m.title)}</a>`).join('')).join('') : ''}`;
 }
 
+const videoTitleCache = new Map();
+async function getYouTubeTitle(videoId) {
+  if (!videoId) return '';
+  if (videoTitleCache.has(videoId)) return videoTitleCache.get(videoId);
+  try {
+    const saved = JSON.parse(localStorage.getItem('c29ytTitles') || '{}');
+    if (saved[videoId]) {
+      videoTitleCache.set(videoId, saved[videoId]);
+      return saved[videoId];
+    }
+  } catch {}
+  try {
+    const url = 'https://www.youtube.com/oembed?url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + videoId) + '&format=json';
+    const response = await fetch(url);
+    if (!response.ok) return '';
+    const data = await response.json();
+    const title = String(data.title || '').trim().slice(0, 180);
+    if (title) {
+      videoTitleCache.set(videoId, title);
+      try {
+        const saved = JSON.parse(localStorage.getItem('c29ytTitles') || '{}');
+        saved[videoId] = title;
+        localStorage.setItem('c29ytTitles', JSON.stringify(saved));
+      } catch {}
+    }
+    return title;
+  } catch (error) {
+    console.warn('Could not load YouTube title:', videoId, error);
+    return '';
+  }
+}
+async function resolveYouTubeTitles(videos) {
+  await Promise.all((videos || []).map(async video => {
+    if (!video.video_id || !isGeneric(video.title)) return;
+    const title = await getYouTubeTitle(video.video_id);
+    if (!title) return;
+    video.label = title;
+    document.querySelectorAll('[data-video-title-id="' + CSS.escape(video.video_id) + '"]').forEach(node => {
+      node.textContent = title;
+    });
+  }));
+}
+
 function watch(id) {
   const x = byId[id]; if (!x) return notFound();
   const { c, g, t, gi, ti } = x, i = t.videos.indexOf(c), prev = t.videos[i - 1], next = t.videos[i + 1], seen = seenSet();
   if (c.video_id) markSeen(c.id);
   const link = k => k ? `href="#/c/${encodeURIComponent(k.id)}"` : '';
   $app.innerHTML = crumbs([['Home', '#/'], [g.name, '#/g/' + gi], [t.name, `#/g/${gi}/t/${ti}`], [c.label]]) + `<div class="watch"><div>
-  <h1 style="font-size:clamp(22px,3.5vw,32px);letter-spacing:-.5px">${esc(c.label)}</h1>
+  <h1 data-video-title-id="${esc(c.video_id || '')}" style="font-size:clamp(22px,3.5vw,32px);letter-spacing:-.5px">${esc(c.label)}</h1>
   <p class="sub">${esc(t.name)} · ${fmt(c.date)}</p>
   ${c.video_id ? `<div class="player" id="class-player"><iframe title="Class video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.video_id)}?rel=0&playsinline=1"></iframe></div>
   <div class="nav"><a class="btn ${prev ? '' : 'off'}" ${link(prev)}>← Previous</a><a class="btn" target="_blank" rel="noopener" href="${esc(c.url)}">YouTube ↗</a><a class="btn ${next ? '' : 'off'}" ${link(next)}>Next →</a><button class="btn fs-btn" id="class-fullscreen" type="button" aria-label="Enter fullscreen" title="Fullscreen">⛶</button></div>` : ''}
@@ -120,6 +163,7 @@ function watch(id) {
     }
   });
   document.title = c.label + ' · Class 29';
+  resolveYouTubeTitles(t.videos);
 }
 
 const notFound = () => { $app.innerHTML = '<div class="empty">Not found. <a class="btn" href="#/">Go home</a></div>'; };
