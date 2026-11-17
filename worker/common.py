@@ -64,20 +64,35 @@ def is_banner(title):
 
 
 def pick_title(text, topic=""):
-    """First real line of the admin's message, skipping channel banners and bare links."""
+    """Extract the actual lesson title from the message text before its first link.
+
+    Telegram posts commonly look like:
+      Lesson title
+      YouTube URL
+      Google Drive / slide URL
+
+    Ignore channel promotion/branding lines such as FREE & PAID COURSE BD.
+    """
+    message_text = (text or "").strip()
+    if not message_text:
+        return ""
+
+    # The lesson title is in the text before the first YouTube URL.
+    # Keep all preceding lines so a title on its own line is preserved.
+    youtube_match = YT.search(message_text)
+    title_part = message_text[:youtube_match.start()] if youtube_match else message_text
+
     good = []
-    for raw in (text or "").splitlines():
-        if not raw.strip() or URL.fullmatch(raw.strip()):
-            continue
-        if URL.search(raw) and len(URL.sub("", raw).strip()) < 4:
+    for raw in title_part.splitlines():
+        if not raw.strip():
             continue
         line = clean_line(URL.sub("", raw))
         if len(line) < 3 or is_banner(raw):
             continue
+        if line.casefold() == (topic or "").casefold():
+            continue
         good.append(line[:140])
-    for line in good:
-        if line.casefold() != (topic or "").casefold():
-            return line
+
     return good[0] if good else ""
 
 
