@@ -304,7 +304,12 @@ class GitHubJSON:
                     group["topics"].sort(
                         key=lambda item: item.get("name", "").casefold()
                     )
-                groups.sort(key=lambda item: item.get("name", "").casefold())
+                priority = ["POWERPLAY 27", "ACS FRB 27", "POWERPLAY 26", "ACS FRB 26"]
+                def group_order(item):
+                    name = item.get("name", "").upper()
+                    rank = next((i for i, label in enumerate(priority) if label in name), len(priority))
+                    return (rank, name.casefold())
+                groups.sort(key=group_order)
 
                 data["version"] = 2
                 data["updated_at"] = now()
