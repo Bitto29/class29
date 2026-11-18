@@ -6,39 +6,63 @@ const pad = n => String(n).padStart(2, '0');
 const seenSet = () => { try { return new Set(JSON.parse(localStorage.getItem('c29seen') || '[]')); } catch { return new Set(); } };
 const markSeen = id => { try { const s = seenSet(); s.add(id); localStorage.setItem('c29seen', JSON.stringify([...s])); } catch { } };
 
-// Per-device new-class notifications. First visit creates a quiet baseline.
-let newClassIds = new Set();
-const readNewClassIds = () => { try { return new Set(JSON.parse(localStorage.getItem('c29newClassIds') || '[]')); } catch { return new Set(); } };
-const saveNewClassIds = () => { try { localStorage.setItem('c29newClassIds', JSON.stringify([...newClassIds])); } catch {} };
+// Per-device, per-group and per-subject notifications.
+const NOTIFY_VERSION = 'c29notif-v2';
+const areaKey = (g, t) => NOTIFY_VERSION + ':' + encodeURIComponent(g.name) + ':' + encodeURIComponent(t.name);
+function readArea(g, t) {
+  try { return JSON.parse(localStorage.getItem(areaKey(g, t)) || 'null'); } catch { return null; }
+}
+function writeArea(g, t, state) {
+  try { localStorage.setItem(areaKey(g, t), JSON.stringify(state)); } catch {}
+}
 function syncNewClassIds() {
-  const current = lib.groups.flatMap(g => g.topics.flatMap(t => t.classes.filter(c => c.video_id).map(c => c.id)));
+  let legacyKnown = null;
   try {
     const raw = localStorage.getItem('c29knownClassIds');
-    if (raw === null) {
-      localStorage.setItem('c29knownClassIds', JSON.stringify(current));
-      newClassIds = new Set();
-      return;
+    if (raw !== null) legacyKnown = new Set(JSON.parse(raw));
+  } catch {}
+  const allCurrent = [];
+  lib.groups.forEach(g => g.topics.forEach(t => {
+    const current = t.classes.filter(c => c.video_id).map(c => c.id);
+    allCurrent.push(...current);
+    let state = readArea(g, t);
+    if (!state || state.version !== 2) {
+      // Migrate the previous global baseline if available; otherwise quietly baseline this area.
+      const known = legacyKnown ? new Set(current.filter(id => legacyKnown.has(id))) : new Set(current);
+      const unread = legacyKnown ? current.filter(id => !known.has(id)) : [];
+      state = { version: 2, known: [...known], unread };
+    } else {
+      const known = new Set(state.known || []);
+      const unread = new Set(state.unread || []);
+      current.forEach(id => { if (!known.has(id)) unread.add(id); });
+      state = { version: 2, known: current, unread: [...unread].filter(id => current.includes(id)) };
     }
-    const known = new Set(JSON.parse(raw));
-    newClassIds = readNewClassIds();
-    current.forEach(id => { if (!known.has(id)) newClassIds.add(id); });
-    localStorage.setItem('c29knownClassIds', JSON.stringify(current));
-    saveNewClassIds();
-  } catch { newClassIds = new Set(); }
+    writeArea(g, t, state);
+  }));
+  try { localStorage.setItem('c29knownClassIds', JSON.stringify(allCurrent)); } catch {}
 }
-const newCount = videos => (videos || []).reduce((n, c) => n + (newClassIds.has(c.id) ? 1 : 0), 0);
+const newCount = (g, t) => (readArea(g, t)?.unread || []).length;
 function newBadge(count) {
   return count ? `<span class="new-badge" aria-label="${count} new classes">${count > 99 ? '99+' : count}</span>` : '';
 }
-function acknowledgeSubject(t) {
-  (t.videos || []).forEach(c => newClassIds.delete(c.id));
-  saveNewClassIds();
+function acknowledgeSubject(g, t) {
+  const state = readArea(g, t);
+  if (!state) return;
+  state.unread = [];
+  writeArea(g, t, state);
 }
 
 
 // Channel banners repeat across hundreds of posts, so they are not real class names.
 const isGeneric = t => /PAID COURSE|FREE COURSE|FREE & PAID|FREE MATERIALS|COURSE MATERIALS|\bFCBD\b|\bPCBD\b|ACS FRB|POWERPLAY|\bUDVASH\b|\bINDEX\b|যদি এই ক্লাস|চ্যানেলে যুক্ত|JOIN|SUBSCRIBE/i.test(String(t || '').normalize('NFKC'));
 const byTime = (a, b) => (a.date || '').localeCompare(b.date || '') || (a.telegram_message_id - b.telegram_message_id);
+
+function rankGroup(name) {
+  const n = String(name || '').toUpperCase();
+  const order = ['POWERPLAY 27','ACS FRB 27','POWERPLAY 26','ACS FRB 26'];
+  const i = order.findIndex(label => n.includes(label));
+  return i < 0 ? order.length : i;
+}
 
 function prepare() {
   byId = {}; freq = {};
@@ -80,7 +104,7 @@ function home() {
       out.innerHTML = '<div class="grid">' + lib.groups.map((g, gi) => {
         const v = g.topics.reduce((n, t) => n + t.videos.length, 0);
         const cover = groupCover(g);
-        const fresh = g.topics.reduce((n, t) => n + newCount(t.videos), 0);
+        const fresh = g.topics.reduce((n, t) => n + newCount(g, t), 0);
         return `<a class="card" href="#/g/${gi}">${cover ? `<img class="group-cover" src="${esc(cover)}" alt="" loading="lazy" decoding="async">` : `<div class="ico">${esc(g.name.trim().slice(0, 2).toUpperCase())}</div>`}${newBadge(fresh)}<h3>${esc(g.name)}</h3><div class="meta"><span class="pill">${g.topics.length} subjects</span><span class="pill m">${v} classes</span></div></a>`;
       }).join('') + '</div>';
       return;
@@ -101,12 +125,12 @@ function row(c, sub, on, seen) {
 function group(gi) {
   const g = lib.groups[gi]; if (!g) return notFound();
   $app.innerHTML = crumbs([['Home', '#/'], [g.name]]) + `<div class="eyebrow">Group</div><h1 style="font-size:clamp(26px,4vw,40px)">${esc(g.name)}</h1><p class="sub">${g.topics.length} subjects</p>
-  <div class="grid">${g.topics.map((t, ti) => `<a class="card" href="#/g/${gi}/t/${ti}"><div class="ico">${esc(t.name.trim().slice(0, 2).toUpperCase())}</div>${newBadge(newCount(t.videos))}<h3>${esc(t.name)}</h3><div class="meta"><span class="pill m">${t.videos.length} classes</span>${t.materials.length ? `<span class="pill">${t.materials.length} materials</span>` : ''}${t.last ? `<span class="pill">${fmt(t.last)}</span>` : ''}</div></a>`).join('')}</div>`;
+  <div class="grid">${g.topics.map((t, ti) => `<a class="card" href="#/g/${gi}/t/${ti}"><div class="ico">${esc(t.name.trim().slice(0, 2).toUpperCase())}</div>${newBadge(newCount(g, t))}<h3>${esc(t.name)}</h3><div class="meta"><span class="pill m">${t.videos.length} classes</span>${t.materials.length ? `<span class="pill">${t.materials.length} materials</span>` : ''}${t.last ? `<span class="pill">${fmt(t.last)}</span>` : ''}</div></a>`).join('')}</div>`;
 }
 
 function subject(gi, ti) {
   const g = lib.groups[gi], t = g?.topics[ti]; if (!t) return notFound();
-  acknowledgeSubject(t);
+  acknowledgeSubject(g, t);
   const seen = seenSet();
   $app.innerHTML = crumbs([['Home', '#/'], [g.name, '#/g/' + gi], [t.name]]) + `<div class="eyebrow">Subject</div><h1 style="font-size:clamp(26px,4vw,40px)">${esc(t.name)}</h1><p class="sub">${t.videos.length} classes</p>
   <div class="list">${t.videos.map(c => row(c, fmt(c.date), false, seen)).join('') || '<div class="empty">No video classes yet.</div>'}</div>
@@ -216,10 +240,32 @@ function route() {
     if (!r.ok) throw Error();
     lib = await r.json(); lib.groups = lib.groups || [];
     lib.groups.forEach(g => g.topics = g.topics || []); lib.groups.forEach(g => g.topics.forEach(t => t.classes = t.classes || []));
+    lib.groups.sort((a,b) => rankGroup(a.name) - rankGroup(b.name) || a.name.localeCompare(b.name));
     prepare();
     syncNewClassIds();
     document.getElementById('updated').textContent = lib.updated_at ? 'Updated ' + fmt(lib.updated_at) : '';
     addEventListener('hashchange', route); route();
+    // Check the published library periodically so an open tab can discover newly synced lessons.
+    let lastLibraryVersion = lib.updated_at || '';
+    const refreshLibrary = async () => {
+      if (document.hidden) return;
+      try {
+        const fresh = await fetch('./data/classes.json?check=' + Date.now(), { cache: 'no-store' });
+        if (!fresh.ok) return;
+        const next = await fresh.json();
+        if ((next.updated_at || '') === lastLibraryVersion) return;
+        lib = next; lib.groups = lib.groups || [];
+        lib.groups.forEach(g => { g.topics = g.topics || []; g.topics.forEach(t => t.classes = t.classes || []); });
+        lib.groups.sort((a,b) => rankGroup(a.name) - rankGroup(b.name) || a.name.localeCompare(b.name));
+        prepare(); syncNewClassIds();
+        lastLibraryVersion = lib.updated_at || '';
+        document.getElementById('updated').textContent = lib.updated_at ? 'Updated ' + fmt(lib.updated_at) : '';
+        route();
+      } catch (error) { console.warn('Library refresh failed', error); }
+    };
+    setInterval(refreshLibrary, 60000);
+    addEventListener('focus', refreshLibrary);
+    document.addEventListener('visibilitychange', refreshLibrary);
   } catch (e) { $app.innerHTML = '<div class="empty">Library data could not be loaded. Refresh later.</div>'; }
 })();
 
