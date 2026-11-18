@@ -17,9 +17,11 @@ function writeArea(g, t, state) {
 }
 function syncNewClassIds() {
   let legacyKnown = null;
+  let legacyUnread = new Set();
   try {
     const raw = localStorage.getItem('c29knownClassIds');
     if (raw !== null) legacyKnown = new Set(JSON.parse(raw));
+    legacyUnread = new Set(JSON.parse(localStorage.getItem('c29newClassIds') || '[]'));
   } catch {}
   const allCurrent = [];
   lib.groups.forEach(g => g.topics.forEach(t => {
@@ -29,7 +31,7 @@ function syncNewClassIds() {
     if (!state || state.version !== 2) {
       // Migrate the previous global baseline if available; otherwise quietly baseline this area.
       const known = legacyKnown ? new Set(current.filter(id => legacyKnown.has(id))) : new Set(current);
-      const unread = legacyKnown ? current.filter(id => !known.has(id)) : [];
+      const unread = current.filter(id => legacyUnread.has(id) || (legacyKnown && !known.has(id)));
       state = { version: 2, known: [...known], unread };
     } else {
       const known = new Set(state.known || []);
