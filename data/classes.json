@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-17T17:42:12.031161+00:00",
+  "updated_at": "2026-11-18T16:34:36.080796+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -132,6 +132,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-347-wcPUBuQJNvo",
+              "source_key": "-1004201359575:347:wcPUBuQJNvo",
+              "title": "মাসি পিসি",
+              "topic": "BANGLA",
+              "date": "2026-11-18T10:39:36+00:00",
+              "telegram_message_id": 347,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1-jLNFW_GBYS99bH4byJdbSjiUvdwhc9y/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "wcPUBuQJNvo",
+              "url": "https://www.youtube.com/watch?v=wcPUBuQJNvo"
+            },
             {
               "id": "cv--1004201359575-328-pF2mMQ3Yn5o",
               "source_key": "-1004201359575:328:pF2mMQ3Yn5o",
