@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-19T13:32:19.554126+00:00",
+  "updated_at": "2026-11-19T21:46:33.661467+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -29,6 +29,22 @@
           "name": "BANGLA",
           "classes": [
             {
+              "id": "cv--1003984486117-114-o7lvHwLddT8",
+              "source_key": "-1003984486117:114:o7lvHwLddT8",
+              "title": "যৌবনের গান",
+              "topic": "BANGLA",
+              "date": "2026-11-19T18:05:54+00:00",
+              "telegram_message_id": 114,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1kb_uOEYejeoFgP8VIC1ul4tCv-cYE9oZ/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "o7lvHwLddT8",
+              "url": "https://www.youtube.com/watch?v=o7lvHwLddT8"
+            },
+            {
               "id": "cv--1003984486117-92-5Qmh_ePR0Ig",
               "source_key": "-1003984486117:92:5Qmh_ePR0Ig",
               "title": "ব্যাকরণিক শব্দশ্রেণি",
@@ -49,6 +65,22 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1003984486117-115-ggpWpq-tCds",
+              "source_key": "-1003984486117:115:ggpWpq-tCds",
+              "title": "Special words and phrases",
+              "topic": "ENGLISH",
+              "date": "2026-11-19T18:08:59+00:00",
+              "telegram_message_id": 115,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1UM_dkzaA3JfVC5lF9ar2fH-ASwheCPrr/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "ggpWpq-tCds",
+              "url": "https://www.youtube.com/watch?v=ggpWpq-tCds"
+            },
             {
               "id": "cv--1003984486117-110-6ZK4R2-1kh4",
               "source_key": "-1003984486117:110:6ZK4R2-1kh4",
