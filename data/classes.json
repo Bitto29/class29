@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-18T16:34:36.080796+00:00",
+  "updated_at": "2026-11-19T04:08:53.243804+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -367,6 +367,17 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-349-sEa3pp6W5nw",
+              "source_key": "-1004201359575:349:sEa3pp6W5nw",
+              "title": "Unit 3-Myths and Literature",
+              "topic": "ENGLISH",
+              "date": "2026-11-19T00:55:39+00:00",
+              "telegram_message_id": 349,
+              "resources": [],
+              "video_id": "sEa3pp6W5nw",
+              "url": "https://www.youtube.com/watch?v=sEa3pp6W5nw"
+            },
             {
               "id": "cv--1004201359575-343-cTdub7TRoC0",
               "source_key": "-1004201359575:343:cTdub7TRoC0",
