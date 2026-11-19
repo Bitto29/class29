@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-19T04:08:53.243804+00:00",
+  "updated_at": "2026-11-19T13:32:19.554126+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -87,6 +87,38 @@
           "name": "ICT",
           "classes": [
             {
+              "id": "cv--1003984486117-113-U003ER5xsnA",
+              "source_key": "-1003984486117:113:U003ER5xsnA",
+              "title": "সংখ্যা পদ্ধতি (পর্ব -০৩)",
+              "topic": "ICT",
+              "date": "2026-11-19T08:13:33+00:00",
+              "telegram_message_id": 113,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1w94ZAHcKMnQDsuQx75XQhTDIX1sNuELW/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "U003ER5xsnA",
+              "url": "https://www.youtube.com/watch?v=U003ER5xsnA"
+            },
+            {
+              "id": "cv--1003984486117-112-ceZqygU4Wlw",
+              "source_key": "-1003984486117:112:ceZqygU4Wlw",
+              "title": "সংখ্যা পদ্ধতি (পর্ব -০২)",
+              "topic": "ICT",
+              "date": "2026-11-19T08:13:33+00:00",
+              "telegram_message_id": 112,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1cDDM7aoT0LmlUP5vHtGYix-MYJz97HJu/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "ceZqygU4Wlw",
+              "url": "https://www.youtube.com/watch?v=ceZqygU4Wlw"
+            },
+            {
               "id": "cv--1003984486117-108-2ksKGiVmrNk",
               "source_key": "-1003984486117:108:2ksKGiVmrNk",
               "title": "সংখ্যা পদ্ধতি (পর্ব -০১)",
@@ -132,6 +164,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-350-SBnLk1npyJg",
+              "source_key": "-1004201359575:350:SBnLk1npyJg",
+              "title": "গন্তব্য  কাবুল",
+              "topic": "BANGLA",
+              "date": "2026-11-19T12:28:53+00:00",
+              "telegram_message_id": 350,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1brzAoYYZMtmpXtDU2li6lhx2X2G5ahkl/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "SBnLk1npyJg",
+              "url": "https://www.youtube.com/watch?v=SBnLk1npyJg"
+            },
             {
               "id": "cv--1004201359575-347-wcPUBuQJNvo",
               "source_key": "-1004201359575:347:wcPUBuQJNvo",
