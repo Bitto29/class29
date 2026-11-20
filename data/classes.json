@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-19T21:46:33.661467+00:00",
+  "updated_at": "2026-11-20T10:37:46.976003+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -12843,6 +12843,54 @@
           "name": "BANGLA",
           "classes": [
             {
+              "id": "cv--1004422905051-856-8F0yiAoDlZA",
+              "source_key": "-1004422905051:856:8F0yiAoDlZA",
+              "title": "Regular Live Class Bangla-16",
+              "topic": "BANGLA",
+              "date": "2026-11-20T05:29:20+00:00",
+              "telegram_message_id": 856,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "8F0yiAoDlZA",
+              "url": "https://www.youtube.com/watch?v=8F0yiAoDlZA"
+            },
+            {
+              "id": "cv--1004422905051-853-D15Av3tFwe0",
+              "source_key": "-1004422905051:853:D15Av3tFwe0",
+              "title": "Regular Live Class Bangla-15",
+              "topic": "BANGLA",
+              "date": "2026-11-20T05:21:34+00:00",
+              "telegram_message_id": 853,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "D15Av3tFwe0",
+              "url": "https://www.youtube.com/watch?v=D15Av3tFwe0"
+            },
+            {
+              "id": "cv--1004422905051-851-HU6eq2jrdSA",
+              "source_key": "-1004422905051:851:HU6eq2jrdSA",
+              "title": "Regular Live Class Bangla-14",
+              "topic": "BANGLA",
+              "date": "2026-11-20T05:16:36+00:00",
+              "telegram_message_id": 851,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "HU6eq2jrdSA",
+              "url": "https://www.youtube.com/watch?v=HU6eq2jrdSA"
+            },
+            {
               "id": "cv--1004422905051-841-7V4A4kmTkzs",
               "source_key": "-1004422905051:841:7V4A4kmTkzs",
               "title": "Regular Live Class Bangla-13",
@@ -13055,6 +13103,54 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004422905051-855-sjs8PmNf3KA",
+              "source_key": "-1004422905051:855:sjs8PmNf3KA",
+              "title": "Regular Live Class English-16",
+              "topic": "ENGLISH",
+              "date": "2026-11-20T05:26:06+00:00",
+              "telegram_message_id": 855,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "sjs8PmNf3KA",
+              "url": "https://www.youtube.com/watch?v=sjs8PmNf3KA"
+            },
+            {
+              "id": "cv--1004422905051-854-9R5Pgq3pkgU",
+              "source_key": "-1004422905051:854:9R5Pgq3pkgU",
+              "title": "Regular Live Class English-15",
+              "topic": "ENGLISH",
+              "date": "2026-11-20T05:22:34+00:00",
+              "telegram_message_id": 854,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "9R5Pgq3pkgU",
+              "url": "https://www.youtube.com/watch?v=9R5Pgq3pkgU"
+            },
+            {
+              "id": "cv--1004422905051-852-YW78qI4NIeU",
+              "source_key": "-1004422905051:852:YW78qI4NIeU",
+              "title": "Regular Live Class English-14",
+              "topic": "ENGLISH",
+              "date": "2026-11-20T05:17:52+00:00",
+              "telegram_message_id": 852,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "YW78qI4NIeU",
+              "url": "https://www.youtube.com/watch?v=YW78qI4NIeU"
+            },
             {
               "id": "cv--1004422905051-842-QF5XfaPLdkk",
               "source_key": "-1004422905051:842:QF5XfaPLdkk",
