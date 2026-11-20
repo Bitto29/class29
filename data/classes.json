@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-20T10:37:46.976003+00:00",
+  "updated_at": "2026-11-20T18:52:59.014247+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -196,6 +196,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-354-v6Sg279Khww",
+              "source_key": "-1004201359575:354:v6Sg279Khww",
+              "title": "ঋতু বর্ণন",
+              "topic": "BANGLA",
+              "date": "2026-11-20T12:00:52+00:00",
+              "telegram_message_id": 354,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1DNZORRugaZgwFYZ_LH_oQSC9uD61FePR/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "v6Sg279Khww",
+              "url": "https://www.youtube.com/watch?v=v6Sg279Khww"
+            },
             {
               "id": "cv--1004201359575-350-SBnLk1npyJg",
               "source_key": "-1004201359575:350:SBnLk1npyJg",
