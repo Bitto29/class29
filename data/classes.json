@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-21T07:47:03.797324+00:00",
+  "updated_at": "2026-11-21T15:40:39.054593+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -207,6 +207,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-359-qrDW8QiAyEA",
+              "source_key": "-1004201359575:359:qrDW8QiAyEA",
+              "title": "শব্দ ও প্রকৃতি প্রত্যয়",
+              "topic": "BANGLA",
+              "date": "2026-11-21T10:15:51+00:00",
+              "telegram_message_id": 359,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1oAkmLhSaf-e8_xQCO9uOu9zmH5HJblgi/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "qrDW8QiAyEA",
+              "url": "https://www.youtube.com/watch?v=qrDW8QiAyEA"
+            },
             {
               "id": "cv--1004201359575-354-v6Sg279Khww",
               "source_key": "-1004201359575:354:v6Sg279Khww",
