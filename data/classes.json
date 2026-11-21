@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-21T15:40:39.054593+00:00",
+  "updated_at": "2026-11-21T21:14:42.576924+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -129,6 +129,22 @@
         {
           "name": "ICT",
           "classes": [
+            {
+              "id": "cv--1003984486117-117-xliErAnxW3E",
+              "source_key": "-1003984486117:117:xliErAnxW3E",
+              "title": "ডিজিটাল ডিভাইস পর্ব ১",
+              "topic": "ICT",
+              "date": "2026-11-21T18:22:13+00:00",
+              "telegram_message_id": 117,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/16D1LtZBsXOFa3CKjoLNOdZwcMUtWi6uN/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "xliErAnxW3E",
+              "url": "https://www.youtube.com/watch?v=xliErAnxW3E"
+            },
             {
               "id": "cv--1003984486117-113-U003ER5xsnA",
               "source_key": "-1003984486117:113:U003ER5xsnA",
