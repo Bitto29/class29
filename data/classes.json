@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-22T08:45:23.767568+00:00",
+  "updated_at": "2026-11-22T16:43:03.734342+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -506,6 +506,54 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-366-u_vRO2m-1QM",
+              "source_key": "-1004201359575:366:u_vRO2m-1QM",
+              "title": "Narration | Part - 1.2",
+              "topic": "ENGLISH",
+              "date": "2026-11-22T16:16:52+00:00",
+              "telegram_message_id": 366,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1oXMZom2x_I0N5othKL8pYxMJajNYgF4J/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "u_vRO2m-1QM",
+              "url": "https://www.youtube.com/watch?v=u_vRO2m-1QM"
+            },
+            {
+              "id": "cv--1004201359575-365-u_vRO2m-1QM",
+              "source_key": "-1004201359575:365:u_vRO2m-1QM",
+              "title": "Narration | Part - 1.1",
+              "topic": "ENGLISH",
+              "date": "2026-11-22T16:16:52+00:00",
+              "telegram_message_id": 365,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1oXMZom2x_I0N5othKL8pYxMJajNYgF4J/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "u_vRO2m-1QM",
+              "url": "https://www.youtube.com/watch?v=u_vRO2m-1QM"
+            },
+            {
+              "id": "cv--1004201359575-364-CSLTuLPuFLU",
+              "source_key": "-1004201359575:364:CSLTuLPuFLU",
+              "title": "Unit 6 Dreams + Pronoun Reference",
+              "topic": "ENGLISH",
+              "date": "2026-11-22T16:09:46+00:00",
+              "telegram_message_id": 364,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1ZlJ7lLcMb_8b-nEZrfdLboTC4yCZJtmP/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "CSLTuLPuFLU",
+              "url": "https://www.youtube.com/watch?v=CSLTuLPuFLU"
+            },
             {
               "id": "cv--1004201359575-360-iUfKT12nU8c",
               "source_key": "-1004201359575:360:iUfKT12nU8c",
@@ -12913,6 +12961,22 @@
           "name": "BANGLA",
           "classes": [
             {
+              "id": "cv--1004422905051-864-SewBMluQW4s",
+              "source_key": "-1004422905051:864:SewBMluQW4s",
+              "title": "Regular Live Class Bangla-17",
+              "topic": "BANGLA",
+              "date": "2026-11-22T09:07:45+00:00",
+              "telegram_message_id": 864,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "SewBMluQW4s",
+              "url": "https://www.youtube.com/watch?v=SewBMluQW4s"
+            },
+            {
               "id": "cv--1004422905051-862-SewBMluQW4s",
               "source_key": "-1004422905051:862:SewBMluQW4s",
               "title": "https://www.youtube.com/live/SewBMluQW4s?si=hNarBMJWRO7zQvS5",
@@ -13184,6 +13248,22 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004422905051-865-o3kvBw0mj-E",
+              "source_key": "-1004422905051:865:o3kvBw0mj-E",
+              "title": "Regular Live Class English-17",
+              "topic": "ENGLISH",
+              "date": "2026-11-22T09:08:01+00:00",
+              "telegram_message_id": 865,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "o3kvBw0mj-E",
+              "url": "https://www.youtube.com/watch?v=o3kvBw0mj-E"
+            },
             {
               "id": "cv--1004422905051-863-o3kvBw0mj-E",
               "source_key": "-1004422905051:863:o3kvBw0mj-E",
