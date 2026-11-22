@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-22T16:43:03.734342+00:00",
+  "updated_at": "2026-11-22T22:10:26.860948+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -223,6 +223,17 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-367-sdVBZy5jf68",
+              "source_key": "-1004201359575:367:sdVBZy5jf68",
+              "title": "বিদ্রোহী",
+              "topic": "BANGLA",
+              "date": "2026-11-22T19:03:22+00:00",
+              "telegram_message_id": 367,
+              "resources": [],
+              "video_id": "sdVBZy5jf68",
+              "url": "https://www.youtube.com/watch?v=sdVBZy5jf68"
+            },
             {
               "id": "cv--1004201359575-359-qrDW8QiAyEA",
               "source_key": "-1004201359575:359:qrDW8QiAyEA",
