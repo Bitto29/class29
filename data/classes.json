@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-22T01:26:44.263283+00:00",
+  "updated_at": "2026-11-22T08:45:23.767568+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -12913,6 +12913,17 @@
           "name": "BANGLA",
           "classes": [
             {
+              "id": "cv--1004422905051-862-SewBMluQW4s",
+              "source_key": "-1004422905051:862:SewBMluQW4s",
+              "title": "https://www.youtube.com/live/SewBMluQW4s?si=hNarBMJWRO7zQvS5",
+              "topic": "BANGLA",
+              "date": "2026-11-22T07:32:59+00:00",
+              "telegram_message_id": 862,
+              "resources": [],
+              "video_id": "SewBMluQW4s",
+              "url": "https://www.youtube.com/watch?v=SewBMluQW4s"
+            },
+            {
               "id": "cv--1004422905051-856-8F0yiAoDlZA",
               "source_key": "-1004422905051:856:8F0yiAoDlZA",
               "title": "Regular Live Class Bangla-16",
@@ -13173,6 +13184,17 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004422905051-863-o3kvBw0mj-E",
+              "source_key": "-1004422905051:863:o3kvBw0mj-E",
+              "title": "https://www.youtube.com/live/o3kvBw0mj-E?si=GC9sP9r6LbClOWDW",
+              "topic": "ENGLISH",
+              "date": "2026-11-22T07:33:03+00:00",
+              "telegram_message_id": 863,
+              "resources": [],
+              "video_id": "o3kvBw0mj-E",
+              "url": "https://www.youtube.com/watch?v=o3kvBw0mj-E"
+            },
             {
               "id": "cv--1004422905051-855-sjs8PmNf3KA",
               "source_key": "-1004422905051:855:sjs8PmNf3KA",
