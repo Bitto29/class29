@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-22T22:10:26.860948+00:00",
+  "updated_at": "2026-11-24T00:04:43.969801+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -129,6 +129,22 @@
         {
           "name": "ICT",
           "classes": [
+            {
+              "id": "cv--1003984486117-122-pldzDYZ4l0Q",
+              "source_key": "-1003984486117:122:pldzDYZ4l0Q",
+              "title": "ডিজিটাল ডিভাইস পর্ব 2",
+              "topic": "ICT",
+              "date": "2026-11-23T16:50:30+00:00",
+              "telegram_message_id": 122,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1-3svmkh8AY8jXfZ1gUPVhTxPFH9SRhDi/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "pldzDYZ4l0Q",
+              "url": "https://www.youtube.com/watch?v=pldzDYZ4l0Q"
+            },
             {
               "id": "cv--1003984486117-117-xliErAnxW3E",
               "source_key": "-1003984486117:117:xliErAnxW3E",
@@ -517,6 +533,22 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-370-K7aZOWKGF2g",
+              "source_key": "-1004201359575:370:K7aZOWKGF2g",
+              "title": "Narration | Part - 02",
+              "topic": "ENGLISH",
+              "date": "2026-11-23T16:18:01+00:00",
+              "telegram_message_id": 370,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1pJV0oyCH_qUZFKTmq_tW-RoQNjrF3UL8/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "K7aZOWKGF2g",
+              "url": "https://www.youtube.com/watch?v=K7aZOWKGF2g"
+            },
             {
               "id": "cv--1004201359575-366-u_vRO2m-1QM",
               "source_key": "-1004201359575:366:u_vRO2m-1QM",
