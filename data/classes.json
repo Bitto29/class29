@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-24T09:46:00.349374+00:00",
+  "updated_at": "2026-11-24T20:24:28.667702+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -28,6 +28,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1003984486117-126-tWznLuWj9Fs",
+              "source_key": "-1003984486117:126:tWznLuWj9Fs",
+              "title": "সোনার তরী, অপরিচিতা",
+              "topic": "BANGLA",
+              "date": "2026-11-24T17:11:08+00:00",
+              "telegram_message_id": 126,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1DwdkUF2tfOw3k80Mlh6RkdjdhDjTf00g/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "tWznLuWj9Fs",
+              "url": "https://www.youtube.com/watch?v=tWznLuWj9Fs"
+            },
             {
               "id": "cv--1003984486117-123-rCd5ZYdiDFg",
               "source_key": "-1003984486117:123:rCd5ZYdiDFg",
@@ -255,6 +271,38 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-372-hmsRai-lDwA",
+              "source_key": "-1004201359575:372:hmsRai-lDwA",
+              "title": "তাহারেই পড়ে মনে + যৌবনের গান | Part 02",
+              "topic": "BANGLA",
+              "date": "2026-11-24T16:05:34+00:00",
+              "telegram_message_id": 372,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/10mZn8svydMjHsKsWEFrPUg6gB5n7nsXC/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "hmsRai-lDwA",
+              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA"
+            },
+            {
+              "id": "cv--1004201359575-371-hmsRai-lDwA",
+              "source_key": "-1004201359575:371:hmsRai-lDwA",
+              "title": "তাহারেই পড়ে মনে + যৌবনের গান | Part 01",
+              "topic": "BANGLA",
+              "date": "2026-11-24T16:05:34+00:00",
+              "telegram_message_id": 371,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/10mZn8svydMjHsKsWEFrPUg6gB5n7nsXC/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "hmsRai-lDwA",
+              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA"
+            },
             {
               "id": "cv--1004201359575-367-sdVBZy5jf68",
               "source_key": "-1004201359575:367:sdVBZy5jf68",
@@ -549,6 +597,22 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-373-g1cgKvxu9dw",
+              "source_key": "-1004201359575:373:g1cgKvxu9dw",
+              "title": "Modifiers",
+              "topic": "ENGLISH",
+              "date": "2026-11-24T16:05:52+00:00",
+              "telegram_message_id": 373,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1R51RoNH_nxLFRrW2LfQJCnl3X3gp8_aj/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "g1cgKvxu9dw",
+              "url": "https://www.youtube.com/watch?v=g1cgKvxu9dw"
+            },
             {
               "id": "cv--1004201359575-370-K7aZOWKGF2g",
               "source_key": "-1004201359575:370:K7aZOWKGF2g",
@@ -1085,6 +1149,28 @@
         {
           "name": "ICT",
           "classes": [
+            {
+              "id": "cv--1004201359575-379-yYVUIXmR324",
+              "source_key": "-1004201359575:379:yYVUIXmR324",
+              "title": "Programming Language (প্রোগ্রামিং ভাষা ) - 1.2",
+              "topic": "ICT",
+              "date": "2026-11-24T19:12:09+00:00",
+              "telegram_message_id": 379,
+              "resources": [],
+              "video_id": "yYVUIXmR324",
+              "url": "https://www.youtube.com/watch?v=yYVUIXmR324"
+            },
+            {
+              "id": "cv--1004201359575-378-yYVUIXmR324",
+              "source_key": "-1004201359575:378:yYVUIXmR324",
+              "title": "Programming Language (প্রোগ্রামিং ভাষা ) - 1.1",
+              "topic": "ICT",
+              "date": "2026-11-24T19:12:08+00:00",
+              "telegram_message_id": 378,
+              "resources": [],
+              "video_id": "yYVUIXmR324",
+              "url": "https://www.youtube.com/watch?v=yYVUIXmR324"
+            },
             {
               "id": "cv--1004201359575-241-yDob4g2hT8o",
               "source_key": "-1004201359575:241:yDob4g2hT8o",
@@ -13020,6 +13106,38 @@
           "name": "BANGLA",
           "classes": [
             {
+              "id": "cv--1004422905051-879-QnqqjMPTGwU",
+              "source_key": "-1004422905051:879:QnqqjMPTGwU",
+              "title": "Regular Live Class Bangla-19",
+              "topic": "BANGLA",
+              "date": "2026-11-24T13:39:50+00:00",
+              "telegram_message_id": 879,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "QnqqjMPTGwU",
+              "url": "https://www.youtube.com/watch?v=QnqqjMPTGwU"
+            },
+            {
+              "id": "cv--1004422905051-877-LSAuwQ6rCgk",
+              "source_key": "-1004422905051:877:LSAuwQ6rCgk",
+              "title": "Regular Live Class Bangla-18",
+              "topic": "BANGLA",
+              "date": "2026-11-24T13:36:02+00:00",
+              "telegram_message_id": 877,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "LSAuwQ6rCgk",
+              "url": "https://www.youtube.com/watch?v=LSAuwQ6rCgk"
+            },
+            {
               "id": "cv--1004422905051-864-SewBMluQW4s",
               "source_key": "-1004422905051:864:SewBMluQW4s",
               "title": "Regular Live Class Bangla-17",
@@ -13307,6 +13425,38 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004422905051-878-kmSnz8P9ZFw",
+              "source_key": "-1004422905051:878:kmSnz8P9ZFw",
+              "title": "Regular Live Class English-19",
+              "topic": "ENGLISH",
+              "date": "2026-11-24T13:38:49+00:00",
+              "telegram_message_id": 878,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "kmSnz8P9ZFw",
+              "url": "https://www.youtube.com/watch?v=kmSnz8P9ZFw"
+            },
+            {
+              "id": "cv--1004422905051-876-4biEe8B4yCw",
+              "source_key": "-1004422905051:876:4biEe8B4yCw",
+              "title": "Regular Live Class English-18",
+              "topic": "ENGLISH",
+              "date": "2026-11-24T13:33:58+00:00",
+              "telegram_message_id": 876,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/drive/folders/1t4Ef9mWZmHZ2F2qLjsP7QzBMjmNQIV0w",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "4biEe8B4yCw",
+              "url": "https://www.youtube.com/watch?v=4biEe8B4yCw"
+            },
             {
               "id": "cv--1004422905051-865-o3kvBw0mj-E",
               "source_key": "-1004422905051:865:o3kvBw0mj-E",
