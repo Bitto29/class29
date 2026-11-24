@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-24T00:04:43.969801+00:00",
+  "updated_at": "2026-11-24T09:46:00.349374+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -28,6 +28,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1003984486117-123-rCd5ZYdiDFg",
+              "source_key": "-1003984486117:123:rCd5ZYdiDFg",
+              "title": "বাক্যতত্ত্ব",
+              "topic": "BANGLA",
+              "date": "2026-11-24T03:10:15+00:00",
+              "telegram_message_id": 123,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1YvGg6xOeQKFFI2IgpgTZfVkW70rbSU3c/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "rCd5ZYdiDFg",
+              "url": "https://www.youtube.com/watch?v=rCd5ZYdiDFg"
+            },
             {
               "id": "cv--1003984486117-116-tg-QqM-plRE",
               "source_key": "-1003984486117:116:tg-QqM-plRE",
