@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-24T20:24:28.667702+00:00",
+  "updated_at": "2026-11-25T13:38:32.160117+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -271,6 +271,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-380-VAQcdIZNmcQ",
+              "source_key": "-1004201359575:380:VAQcdIZNmcQ",
+              "title": "প্রতিদান, পদ্মা, আমি কিংবদন্তির কথা বলছি",
+              "topic": "BANGLA",
+              "date": "2026-11-25T13:33:45+00:00",
+              "telegram_message_id": 380,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1PyYDy6RKwwSt3XCRCdcj6QQOfQBzt5hD/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "VAQcdIZNmcQ",
+              "url": "https://www.youtube.com/watch?v=VAQcdIZNmcQ"
+            },
             {
               "id": "cv--1004201359575-372-hmsRai-lDwA",
               "source_key": "-1004201359575:372:hmsRai-lDwA",
