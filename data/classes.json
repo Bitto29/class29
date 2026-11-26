@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-25T13:38:32.160117+00:00",
+  "updated_at": "2026-11-26T04:33:48.286362+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -108,6 +108,54 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1003984486117-129-S2oOTUHJPR4",
+              "source_key": "-1003984486117:129:S2oOTUHJPR4",
+              "title": "Transformation of sentence -1",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T00:54:26+00:00",
+              "telegram_message_id": 129,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1iAdMGfK1r1e4NUHEOFL39ri8d_fJyL77/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "S2oOTUHJPR4",
+              "url": "https://www.youtube.com/watch?v=S2oOTUHJPR4"
+            },
+            {
+              "id": "cv--1003984486117-128-Fi0ixO9XsNI",
+              "source_key": "-1003984486117:128:Fi0ixO9XsNI",
+              "title": "Right From Off Verbs",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T00:54:26+00:00",
+              "telegram_message_id": 128,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1qM2UOUioEEvJB36qmx3Obg82q7iiKywJ/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "Fi0ixO9XsNI",
+              "url": "https://www.youtube.com/watch?v=Fi0ixO9XsNI"
+            },
+            {
+              "id": "cv--1003984486117-127-EABhTdX2qcE",
+              "source_key": "-1003984486117:127:EABhTdX2qcE",
+              "title": "Completing Sentence 2",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T00:54:26+00:00",
+              "telegram_message_id": 127,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1E9v3wjUWTFbo7RZGVlpb1fvgRO6d8WHY/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "EABhTdX2qcE",
+              "url": "https://www.youtube.com/watch?v=EABhTdX2qcE"
+            },
             {
               "id": "cv--1003984486117-115-ggpWpq-tCds",
               "source_key": "-1003984486117:115:ggpWpq-tCds",
@@ -613,6 +661,38 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-382-biMcWumYuK0",
+              "source_key": "-1004201359575:382:biMcWumYuK0",
+              "title": "Unit: 8",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T00:54:50+00:00",
+              "telegram_message_id": 382,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1wswDHVBHdO61Y2xG8YTBU6JXknPrBeWC/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "biMcWumYuK0",
+              "url": "https://www.youtube.com/watch?v=biMcWumYuK0"
+            },
+            {
+              "id": "cv--1004201359575-381-biMcWumYuK0",
+              "source_key": "-1004201359575:381:biMcWumYuK0",
+              "title": "Unit: 8",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T00:54:50+00:00",
+              "telegram_message_id": 381,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1wswDHVBHdO61Y2xG8YTBU6JXknPrBeWC/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "biMcWumYuK0",
+              "url": "https://www.youtube.com/watch?v=biMcWumYuK0"
+            },
             {
               "id": "cv--1004201359575-373-g1cgKvxu9dw",
               "source_key": "-1004201359575:373:g1cgKvxu9dw",
