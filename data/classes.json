@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-26T04:33:48.286362+00:00",
+  "updated_at": "2026-11-26T23:15:31.253674+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -28,6 +28,22 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1003984486117-130-Dwj_GxYzfjE",
+              "source_key": "-1003984486117:130:Dwj_GxYzfjE",
+              "title": "মাসি পিসি + নেকলেস",
+              "topic": "BANGLA",
+              "date": "2026-11-26T17:43:00+00:00",
+              "telegram_message_id": 130,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1iO5RhObbnIC-YDw8oNOw7k69ITIXaPU2/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "Dwj_GxYzfjE",
+              "url": "https://www.youtube.com/watch?v=Dwj_GxYzfjE"
+            },
             {
               "id": "cv--1003984486117-126-tWznLuWj9Fs",
               "source_key": "-1003984486117:126:tWznLuWj9Fs",
@@ -108,6 +124,22 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1003984486117-132-nRXRAyMiD6w",
+              "source_key": "-1003984486117:132:nRXRAyMiD6w",
+              "title": "Pronoun Reference",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T17:46:03+00:00",
+              "telegram_message_id": 132,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1HrusaB_O2EF9OVA-k6j9QoLf6SqQSj30/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "nRXRAyMiD6w",
+              "url": "https://www.youtube.com/watch?v=nRXRAyMiD6w"
+            },
             {
               "id": "cv--1003984486117-129-S2oOTUHJPR4",
               "source_key": "-1003984486117:129:S2oOTUHJPR4",
@@ -209,6 +241,22 @@
         {
           "name": "ICT",
           "classes": [
+            {
+              "id": "cv--1003984486117-131-pHSyyAtl2SY",
+              "source_key": "-1003984486117:131:pHSyyAtl2SY",
+              "title": "ডিজিটাল ডিভাইস (পর্ব -০৩)",
+              "topic": "ICT",
+              "date": "2026-11-26T17:43:11+00:00",
+              "telegram_message_id": 131,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1gqmwSL2P7GMMsNgcyP4QofSlDxIj9ST3/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "pHSyyAtl2SY",
+              "url": "https://www.youtube.com/watch?v=pHSyyAtl2SY"
+            },
             {
               "id": "cv--1003984486117-122-pldzDYZ4l0Q",
               "source_key": "-1003984486117:122:pldzDYZ4l0Q",
@@ -661,6 +709,17 @@
         {
           "name": "ENGLISH",
           "classes": [
+            {
+              "id": "cv--1004201359575-383-I0ndZkJpsY0",
+              "source_key": "-1004201359575:383:I0ndZkJpsY0",
+              "title": "Unit: 5 Human Rights",
+              "topic": "ENGLISH",
+              "date": "2026-11-26T17:10:11+00:00",
+              "telegram_message_id": 383,
+              "resources": [],
+              "video_id": "I0ndZkJpsY0",
+              "url": "https://www.youtube.com/watch?v=I0ndZkJpsY0"
+            },
             {
               "id": "cv--1004201359575-382-biMcWumYuK0",
               "source_key": "-1004201359575:382:biMcWumYuK0",
