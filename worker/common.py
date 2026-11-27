@@ -96,6 +96,23 @@ def pick_title(text, topic=""):
     return good[0] if good else ""
 
 
+async def youtube_duration(client, video_id):
+    """Read a public video's duration from YouTube's player metadata."""
+    try:
+        response = await client.get(
+            "https://www.youtube.com/watch",
+            params={"v": video_id},
+            headers={"User-Agent": "Mozilla/5.0 (compatible; Class29/1.0)"},
+        )
+        if response.status_code == 200:
+            match = re.search(r'\"lengthSeconds\"\\s*:\\s*\"(\\d+)\"', response.text)
+            if match:
+                return int(match.group(1))
+    except Exception:
+        pass
+    return None
+
+
 async def youtube_title(client, video_id):
     try:
         r = await client.get(
@@ -207,8 +224,7 @@ class GitHubJSON:
     async def add_many(self, entries):
         """Add many Telegram messages with one GitHub read and one commit."""
         if not entries:
-            print("No class/resource messages found.")
-            return 0
+            print("No new Telegram class/resource messages. Checking missing video durations.")
 
         async with httpx.AsyncClient(timeout=60) as client:
             for attempt in range(5):
@@ -290,6 +306,26 @@ class GitHubJSON:
 
                     await asyncio.gather(*(fill(it) for it in todo))
                     changed += len(todo)
+
+                # Backfill durations for existing lessons in small batches to avoid
+                # making every scheduled sync request hundreds of YouTube pages.
+                duration_todo = [
+                    it for it in existing_items.values()
+                    if it.get("video_id") and not it.get("duration_checked")
+                ][:40]
+                if duration_todo:
+                    duration_sem = asyncio.Semaphore(5)
+
+                    async def fill_duration(it):
+                        async with duration_sem:
+                            seconds = await youtube_duration(client, it["video_id"])
+                        it["duration_checked"] = True
+                        if seconds:
+                            it["duration_seconds"] = seconds
+                        return seconds
+
+                    results = await asyncio.gather(*(fill_duration(it) for it in duration_todo))
+                    changed += sum(1 for seconds in results if seconds is not None)
 
                 if added == 0 and changed == 0:
                     print("No new Telegram entries. Existing data is up to date.")
