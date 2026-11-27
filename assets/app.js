@@ -3,6 +3,7 @@ let lib = { groups: [] }, byId = {}, freq = {};
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const fmt = v => { const d = new Date(v); return v && !isNaN(d) ? d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : ''; };
 const pad = n => String(n).padStart(2, '0');
+const durationLabel = seconds => { if (!Number.isFinite(Number(seconds)) || Number(seconds) <= 0) return ''; const n = Math.round(Number(seconds)); const h = Math.floor(n / 3600), m = Math.floor((n % 3600) / 60); return h ? `${h}h ${m}m` : `${m}m`; };
 const seenSet = () => { try { return new Set(JSON.parse(localStorage.getItem('c29seen') || '[]')); } catch { return new Set(); } };
 const markSeen = id => { try { const s = seenSet(); s.add(id); localStorage.setItem('c29seen', JSON.stringify([...s])); } catch { } };
 
@@ -121,7 +122,9 @@ function home() {
 function row(c, sub, on, seen) {
   const thumb = c.video_id ? `<img class="thumb" loading="lazy" alt="" src="https://i.ytimg.com/vi/${encodeURIComponent(c.video_id)}/mqdefault.jpg">` : `<span class="num">↗</span>`;
   const no = c.n ? '#' + pad(c.n) + ' · ' : '';
-  return `<a class="item ${on ? 'on' : ''} ${seen && seen.has(c.id) ? 'seen' : ''}" href="#/c/${encodeURIComponent(c.id)}">${thumb}<span class="t"><strong data-video-title-id="${esc(c.video_id || '')}">${esc(c.label)}</strong><small>${esc(no + (sub || fmt(c.date)))}</small></span></a>`;
+  const duration = durationLabel(c.duration_seconds);
+  const meta = no + (sub || fmt(c.date)) + (duration ? ' · ' + duration : '');
+  return `<a class="item ${on ? 'on' : ''} ${seen && seen.has(c.id) ? 'seen' : ''}" href="#/c/${encodeURIComponent(c.id)}">${thumb}<span class="t"><strong data-video-title-id="${esc(c.video_id || '')}">${esc(c.label)}</strong><small>${esc(meta)}</small></span></a>`;
 }
 
 function group(gi) {
