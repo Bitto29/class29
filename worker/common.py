@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import httpx
+from yt_dlp import YoutubeDL
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -97,20 +98,32 @@ def pick_title(text, topic=""):
 
 
 async def youtube_duration(client, video_id):
-    """Read a public video's duration from YouTube's player metadata."""
+    """Extract a public YouTube video's duration using yt-dlp metadata."""
+    def extract():
+        options = {
+            "quiet": True,
+            "no_warnings": True,
+            "skip_download": True,
+            "socket_timeout": 20,
+            "retries": 1,
+            "extractor_retries": 1,
+            "ignoreerrors": True,
+            "noplaylist": True,
+        }
+        with YoutubeDL(options) as ydl:
+            info = ydl.extract_info(
+                "https://www.youtube.com/watch?v=" + video_id,
+                download=False,
+            )
+        if info and info.get("duration"):
+            return int(info["duration"])
+        return None
+
     try:
-        response = await client.get(
-            "https://www.youtube.com/watch",
-            params={"v": video_id},
-            headers={"User-Agent": "Mozilla/5.0 (compatible; Class29/1.0)"},
-        )
-        if response.status_code == 200:
-            match = re.search(r'"lengthSeconds"\s*:\s*"(\d+)"', response.text)
-            if match:
-                return int(match.group(1))
-    except Exception:
-        pass
-    return None
+        return await asyncio.to_thread(extract)
+    except Exception as exc:
+        print(f"YouTube duration lookup failed for {video_id}: {exc}")
+        return None
 
 
 async def youtube_title(client, video_id):
@@ -309,22 +322,34 @@ class GitHubJSON:
 
                 # Backfill durations for existing lessons in small batches to avoid
                 # making every scheduled sync request hundreds of YouTube pages.
+                # Backfill old lessons. Failed lookups remain eligible for later
+                # retries; only a successfully extracted duration is marked checked.
                 duration_todo = [
                     it for it in existing_items.values()
-                    if it.get("video_id") and not it.get("duration_checked")
-                ][:40]
+                    if it.get("video_id") and not it.get("duration_seconds")
+                ]
+                duration_todo.sort(
+                    key=lambda it: (
+                        int(it.get("duration_attempts", 0)),
+                        it.get("date", ""),
+                    )
+                )
+                duration_todo = duration_todo[:40]
                 if duration_todo:
                     duration_sem = asyncio.Semaphore(5)
 
                     async def fill_duration(it):
                         async with duration_sem:
                             seconds = await youtube_duration(client, it["video_id"])
-                        it["duration_checked"] = True
+                        it["duration_attempts"] = int(it.get("duration_attempts", 0)) + 1
                         if seconds:
                             it["duration_seconds"] = seconds
+                            it["duration_checked"] = True
+                        else:
+                            it.pop("duration_checked", None)
                         return seconds
 
-                    results = await asyncio.gather(*(fill_duration(it) for it in duration_todo))
+                    await asyncio.gather(*(fill_duration(it) for it in duration_todo))
                     changed += len(duration_todo)
 
                 if added == 0 and changed == 0:
