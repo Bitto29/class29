@@ -96,43 +96,37 @@ def pick_title(text, topic=""):
     return good[0] if good else ""
 
 
-# Public Piped API instances. The function falls through to the next host
-# whenever an instance is unavailable, rate-limited, or blocks the request.
-PIPED_API_INSTANCES = [
-    "https://pipedapi.kavin.rocks",
-    "https://pipedapi.leptons.xyz",
-    "https://pipedapi.nosebs.ru",
-    "https://piped-api.privacy.com.de",
-    "https://pipedapi.adminforge.de",
-    "https://api.piped.yt",
-    "https://pipedapi.drgns.space",
-    "https://pipedapi.owo.si",
-    "https://pipedapi.ducks.party",
-]
+def parse_youtube_duration(value):
+    match = re.fullmatch(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?", value or "")
+    if not match:
+        return None
+    days, hours, minutes, seconds = (int(part or 0) for part in match.groups())
+    total = days * 86400 + hours * 3600 + minutes * 60 + seconds
+    return total if total > 0 else None
 
 
-async def youtube_duration(client, video_id):
-    """Get duration from public Piped instances with automatic fallback."""
-    for base_url in PIPED_API_INSTANCES:
+async def youtube_durations(client, video_ids):
+    api_key = os.getenv("YOUTUBE_API_KEY")
+    if not api_key:
+        print("YOUTUBE_API_KEY is not configured; skipping duration backfill.")
+        return {}
+    durations = {}
+    unique_ids = list(dict.fromkeys(video_ids))
+    for offset in range(0, len(unique_ids), 50):
+        batch = unique_ids[offset:offset + 50]
         try:
-            response = await client.get(
-                f"{base_url}/streams/{video_id}",
-                headers={"User-Agent": "Class29/1.0"},
-                timeout=12.0,
-            )
-            if response.status_code != 200:
-                continue
-            payload = response.json()
-            seconds = payload.get("duration")
-            if isinstance(seconds, (int, float)) and seconds > 0:
-                print(f"Duration found via {base_url}: {video_id} = {int(seconds)}s")
-                return int(seconds)
+            response = await client.get("https://www.googleapis.com/youtube/v3/videos", params={"part": "contentDetails", "id": ",".join(batch), "key": api_key}, timeout=30.0)
+            response.raise_for_status()
+            for item in response.json().get("items", []):
+                video_id = item.get("id")
+                iso_duration = item.get("contentDetails", {}).get("duration")
+                seconds = parse_youtube_duration(iso_duration)
+                if video_id and seconds:
+                    durations[video_id] = seconds
         except Exception as exc:
-            print(f"Piped instance unavailable ({base_url}): {type(exc).__name__}")
-            continue
-    print(f"All Piped instances failed for video {video_id}")
-    return None
-
+            print(f"YouTube Data API duration batch failed (batch {offset // 50 + 1}): {type(exc).__name__}")
+    print(f"YouTube Data API found durations for {len(durations)} videos.")
+    return durations
 
 async def youtube_title(client, video_id):
     try:
