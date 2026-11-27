@@ -105,7 +105,7 @@ async def youtube_duration(client, video_id):
             headers={"User-Agent": "Mozilla/5.0 (compatible; Class29/1.0)"},
         )
         if response.status_code == 200:
-            match = re.search(r'\"lengthSeconds\"\\s*:\\s*\"(\\d+)\"', response.text)
+            match = re.search(r'"lengthSeconds"\s*:\s*"(\d+)"', response.text)
             if match:
                 return int(match.group(1))
     except Exception:
@@ -325,7 +325,7 @@ class GitHubJSON:
                         return seconds
 
                     results = await asyncio.gather(*(fill_duration(it) for it in duration_todo))
-                    changed += sum(1 for seconds in results if seconds is not None)
+                    changed += len(duration_todo)
 
                 if added == 0 and changed == 0:
                     print("No new Telegram entries. Existing data is up to date.")
