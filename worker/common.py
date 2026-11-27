@@ -328,36 +328,26 @@ class GitHubJSON:
                     await asyncio.gather(*(fill(it) for it in todo))
                     changed += len(todo)
 
-                # Backfill durations for existing lessons in small batches to avoid
-                # making every scheduled sync request hundreds of YouTube pages.
-                # Backfill old lessons. Failed lookups remain eligible for later
-                # retries; only a successfully extracted duration is marked checked.
+                # Backfill every lesson missing duration in API batches of up to 50 IDs.
+                # Successful results are saved in classes.json and skipped on later syncs.
                 duration_todo = [
                     it for it in existing_items.values()
                     if it.get("video_id") and not it.get("duration_seconds")
                 ]
                 duration_todo.sort(
-                    key=lambda it: (
-                        int(it.get("duration_attempts", 0)),
-                        it.get("date", ""),
-                    )
+                    key=lambda it: (int(it.get("duration_attempts", 0)), it.get("date", ""))
                 )
-                duration_todo = duration_todo[:40]
                 if duration_todo:
-                    duration_sem = asyncio.Semaphore(5)
-
-                    async def fill_duration(it):
-                        async with duration_sem:
-                            seconds = await youtube_duration(client, it["video_id"])
+                    ids = list(dict.fromkeys(it["video_id"] for it in duration_todo))
+                    duration_map = await youtube_durations(client, ids)
+                    for it in duration_todo:
                         it["duration_attempts"] = int(it.get("duration_attempts", 0)) + 1
+                        seconds = duration_map.get(it["video_id"])
                         if seconds:
                             it["duration_seconds"] = seconds
                             it["duration_checked"] = True
                         else:
                             it.pop("duration_checked", None)
-                        return seconds
-
-                    await asyncio.gather(*(fill_duration(it) for it in duration_todo))
                     changed += len(duration_todo)
 
                 if added == 0 and changed == 0:
