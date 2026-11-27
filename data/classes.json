@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-26T23:15:31.253674+00:00",
+  "updated_at": "2026-11-27T02:15:43.796556+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -42,7 +42,8 @@
                 }
               ],
               "video_id": "Dwj_GxYzfjE",
-              "url": "https://www.youtube.com/watch?v=Dwj_GxYzfjE"
+              "url": "https://www.youtube.com/watch?v=Dwj_GxYzfjE",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-126-tWznLuWj9Fs",
@@ -58,7 +59,8 @@
                 }
               ],
               "video_id": "tWznLuWj9Fs",
-              "url": "https://www.youtube.com/watch?v=tWznLuWj9Fs"
+              "url": "https://www.youtube.com/watch?v=tWznLuWj9Fs",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-123-rCd5ZYdiDFg",
@@ -74,7 +76,8 @@
                 }
               ],
               "video_id": "rCd5ZYdiDFg",
-              "url": "https://www.youtube.com/watch?v=rCd5ZYdiDFg"
+              "url": "https://www.youtube.com/watch?v=rCd5ZYdiDFg",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-116-tg-QqM-plRE",
@@ -85,7 +88,8 @@
               "telegram_message_id": 116,
               "resources": [],
               "video_id": "tg-QqM-plRE",
-              "url": "https://www.youtube.com/watch?v=tg-QqM-plRE"
+              "url": "https://www.youtube.com/watch?v=tg-QqM-plRE",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-114-o7lvHwLddT8",
@@ -101,7 +105,8 @@
                 }
               ],
               "video_id": "o7lvHwLddT8",
-              "url": "https://www.youtube.com/watch?v=o7lvHwLddT8"
+              "url": "https://www.youtube.com/watch?v=o7lvHwLddT8",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-92-5Qmh_ePR0Ig",
@@ -117,7 +122,8 @@
                 }
               ],
               "video_id": "5Qmh_ePR0Ig",
-              "url": "https://www.youtube.com/watch?v=5Qmh_ePR0Ig"
+              "url": "https://www.youtube.com/watch?v=5Qmh_ePR0Ig",
+              "duration_checked": true
             }
           ]
         },
@@ -138,7 +144,8 @@
                 }
               ],
               "video_id": "nRXRAyMiD6w",
-              "url": "https://www.youtube.com/watch?v=nRXRAyMiD6w"
+              "url": "https://www.youtube.com/watch?v=nRXRAyMiD6w",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-129-S2oOTUHJPR4",
@@ -154,7 +161,8 @@
                 }
               ],
               "video_id": "S2oOTUHJPR4",
-              "url": "https://www.youtube.com/watch?v=S2oOTUHJPR4"
+              "url": "https://www.youtube.com/watch?v=S2oOTUHJPR4",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-128-Fi0ixO9XsNI",
@@ -170,7 +178,8 @@
                 }
               ],
               "video_id": "Fi0ixO9XsNI",
-              "url": "https://www.youtube.com/watch?v=Fi0ixO9XsNI"
+              "url": "https://www.youtube.com/watch?v=Fi0ixO9XsNI",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-127-EABhTdX2qcE",
@@ -186,7 +195,8 @@
                 }
               ],
               "video_id": "EABhTdX2qcE",
-              "url": "https://www.youtube.com/watch?v=EABhTdX2qcE"
+              "url": "https://www.youtube.com/watch?v=EABhTdX2qcE",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-115-ggpWpq-tCds",
@@ -202,7 +212,8 @@
                 }
               ],
               "video_id": "ggpWpq-tCds",
-              "url": "https://www.youtube.com/watch?v=ggpWpq-tCds"
+              "url": "https://www.youtube.com/watch?v=ggpWpq-tCds",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-110-6ZK4R2-1kh4",
@@ -218,7 +229,8 @@
                 }
               ],
               "video_id": "6ZK4R2-1kh4",
-              "url": "https://www.youtube.com/watch?v=6ZK4R2-1kh4"
+              "url": "https://www.youtube.com/watch?v=6ZK4R2-1kh4",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-99-jPv6RaghK44",
@@ -234,7 +246,8 @@
                 }
               ],
               "video_id": "jPv6RaghK44",
-              "url": "https://www.youtube.com/watch?v=jPv6RaghK44"
+              "url": "https://www.youtube.com/watch?v=jPv6RaghK44",
+              "duration_checked": true
             }
           ]
         },
@@ -255,7 +268,8 @@
                 }
               ],
               "video_id": "pHSyyAtl2SY",
-              "url": "https://www.youtube.com/watch?v=pHSyyAtl2SY"
+              "url": "https://www.youtube.com/watch?v=pHSyyAtl2SY",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-122-pldzDYZ4l0Q",
@@ -271,7 +285,8 @@
                 }
               ],
               "video_id": "pldzDYZ4l0Q",
-              "url": "https://www.youtube.com/watch?v=pldzDYZ4l0Q"
+              "url": "https://www.youtube.com/watch?v=pldzDYZ4l0Q",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-117-xliErAnxW3E",
@@ -287,7 +302,8 @@
                 }
               ],
               "video_id": "xliErAnxW3E",
-              "url": "https://www.youtube.com/watch?v=xliErAnxW3E"
+              "url": "https://www.youtube.com/watch?v=xliErAnxW3E",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-113-U003ER5xsnA",
@@ -303,7 +319,8 @@
                 }
               ],
               "video_id": "U003ER5xsnA",
-              "url": "https://www.youtube.com/watch?v=U003ER5xsnA"
+              "url": "https://www.youtube.com/watch?v=U003ER5xsnA",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-112-ceZqygU4Wlw",
@@ -319,7 +336,8 @@
                 }
               ],
               "video_id": "ceZqygU4Wlw",
-              "url": "https://www.youtube.com/watch?v=ceZqygU4Wlw"
+              "url": "https://www.youtube.com/watch?v=ceZqygU4Wlw",
+              "duration_checked": true
             },
             {
               "id": "cv--1003984486117-108-2ksKGiVmrNk",
@@ -335,7 +353,8 @@
                 }
               ],
               "video_id": "2ksKGiVmrNk",
-              "url": "https://www.youtube.com/watch?v=2ksKGiVmrNk"
+              "url": "https://www.youtube.com/watch?v=2ksKGiVmrNk",
+              "duration_checked": true
             }
           ]
         }
@@ -381,7 +400,8 @@
                 }
               ],
               "video_id": "VAQcdIZNmcQ",
-              "url": "https://www.youtube.com/watch?v=VAQcdIZNmcQ"
+              "url": "https://www.youtube.com/watch?v=VAQcdIZNmcQ",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-372-hmsRai-lDwA",
@@ -397,7 +417,8 @@
                 }
               ],
               "video_id": "hmsRai-lDwA",
-              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA"
+              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-371-hmsRai-lDwA",
@@ -413,7 +434,8 @@
                 }
               ],
               "video_id": "hmsRai-lDwA",
-              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA"
+              "url": "https://www.youtube.com/watch?v=hmsRai-lDwA",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-367-sdVBZy5jf68",
@@ -424,7 +446,8 @@
               "telegram_message_id": 367,
               "resources": [],
               "video_id": "sdVBZy5jf68",
-              "url": "https://www.youtube.com/watch?v=sdVBZy5jf68"
+              "url": "https://www.youtube.com/watch?v=sdVBZy5jf68",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-359-qrDW8QiAyEA",
@@ -440,7 +463,8 @@
                 }
               ],
               "video_id": "qrDW8QiAyEA",
-              "url": "https://www.youtube.com/watch?v=qrDW8QiAyEA"
+              "url": "https://www.youtube.com/watch?v=qrDW8QiAyEA",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-354-v6Sg279Khww",
@@ -456,7 +480,8 @@
                 }
               ],
               "video_id": "v6Sg279Khww",
-              "url": "https://www.youtube.com/watch?v=v6Sg279Khww"
+              "url": "https://www.youtube.com/watch?v=v6Sg279Khww",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-350-SBnLk1npyJg",
@@ -472,7 +497,8 @@
                 }
               ],
               "video_id": "SBnLk1npyJg",
-              "url": "https://www.youtube.com/watch?v=SBnLk1npyJg"
+              "url": "https://www.youtube.com/watch?v=SBnLk1npyJg",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-347-wcPUBuQJNvo",
@@ -488,7 +514,8 @@
                 }
               ],
               "video_id": "wcPUBuQJNvo",
-              "url": "https://www.youtube.com/watch?v=wcPUBuQJNvo"
+              "url": "https://www.youtube.com/watch?v=wcPUBuQJNvo",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-328-pF2mMQ3Yn5o",
@@ -504,7 +531,8 @@
                 }
               ],
               "video_id": "pF2mMQ3Yn5o",
-              "url": "https://www.youtube.com/watch?v=pF2mMQ3Yn5o"
+              "url": "https://www.youtube.com/watch?v=pF2mMQ3Yn5o",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-323-nczyTzaTMQs",
@@ -520,7 +548,8 @@
                 }
               ],
               "video_id": "nczyTzaTMQs",
-              "url": "https://www.youtube.com/watch?v=nczyTzaTMQs"
+              "url": "https://www.youtube.com/watch?v=nczyTzaTMQs",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-305-oqTjB9Q7L98",
@@ -544,7 +573,8 @@
                 }
               ],
               "video_id": "oqTjB9Q7L98",
-              "url": "https://www.youtube.com/watch?v=oqTjB9Q7L98"
+              "url": "https://www.youtube.com/watch?v=oqTjB9Q7L98",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-261-CTG158TWrSA",
@@ -560,7 +590,8 @@
                 }
               ],
               "video_id": "CTG158TWrSA",
-              "url": "https://www.youtube.com/watch?v=CTG158TWrSA"
+              "url": "https://www.youtube.com/watch?v=CTG158TWrSA",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-245-wh9vo9zkZfs",
@@ -576,7 +607,8 @@
                 }
               ],
               "video_id": "wh9vo9zkZfs",
-              "url": "https://www.youtube.com/watch?v=wh9vo9zkZfs"
+              "url": "https://www.youtube.com/watch?v=wh9vo9zkZfs",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-231-ZBttULUFVsc",
@@ -592,7 +624,8 @@
                 }
               ],
               "video_id": "ZBttULUFVsc",
-              "url": "https://www.youtube.com/watch?v=ZBttULUFVsc"
+              "url": "https://www.youtube.com/watch?v=ZBttULUFVsc",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-223-wYEVFM1iHk4",
@@ -608,7 +641,8 @@
                 }
               ],
               "video_id": "wYEVFM1iHk4",
-              "url": "https://www.youtube.com/watch?v=wYEVFM1iHk4"
+              "url": "https://www.youtube.com/watch?v=wYEVFM1iHk4",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-196-FIN4l4hls7w",
@@ -632,7 +666,8 @@
                 }
               ],
               "video_id": "FIN4l4hls7w",
-              "url": "https://www.youtube.com/watch?v=FIN4l4hls7w"
+              "url": "https://www.youtube.com/watch?v=FIN4l4hls7w",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-195-links",
@@ -718,7 +753,8 @@
               "telegram_message_id": 383,
               "resources": [],
               "video_id": "I0ndZkJpsY0",
-              "url": "https://www.youtube.com/watch?v=I0ndZkJpsY0"
+              "url": "https://www.youtube.com/watch?v=I0ndZkJpsY0",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-382-biMcWumYuK0",
@@ -734,7 +770,8 @@
                 }
               ],
               "video_id": "biMcWumYuK0",
-              "url": "https://www.youtube.com/watch?v=biMcWumYuK0"
+              "url": "https://www.youtube.com/watch?v=biMcWumYuK0",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-381-biMcWumYuK0",
@@ -750,7 +787,8 @@
                 }
               ],
               "video_id": "biMcWumYuK0",
-              "url": "https://www.youtube.com/watch?v=biMcWumYuK0"
+              "url": "https://www.youtube.com/watch?v=biMcWumYuK0",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-373-g1cgKvxu9dw",
@@ -766,7 +804,8 @@
                 }
               ],
               "video_id": "g1cgKvxu9dw",
-              "url": "https://www.youtube.com/watch?v=g1cgKvxu9dw"
+              "url": "https://www.youtube.com/watch?v=g1cgKvxu9dw",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-370-K7aZOWKGF2g",
@@ -782,7 +821,8 @@
                 }
               ],
               "video_id": "K7aZOWKGF2g",
-              "url": "https://www.youtube.com/watch?v=K7aZOWKGF2g"
+              "url": "https://www.youtube.com/watch?v=K7aZOWKGF2g",
+              "duration_checked": true
             },
             {
               "id": "cv--1004201359575-366-u_vRO2m-1QM",
