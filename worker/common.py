@@ -8,7 +8,6 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import httpx
-from yt_dlp import YoutubeDL
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -97,33 +96,42 @@ def pick_title(text, topic=""):
     return good[0] if good else ""
 
 
-async def youtube_duration(client, video_id):
-    """Extract a public YouTube video's duration using yt-dlp metadata."""
-    def extract():
-        options = {
-            "quiet": True,
-            "no_warnings": True,
-            "skip_download": True,
-            "socket_timeout": 20,
-            "retries": 1,
-            "extractor_retries": 1,
-            "ignoreerrors": True,
-            "noplaylist": True,
-        }
-        with YoutubeDL(options) as ydl:
-            info = ydl.extract_info(
-                "https://www.youtube.com/watch?v=" + video_id,
-                download=False,
-            )
-        if info and info.get("duration"):
-            return int(info["duration"])
-        return None
+# Public Piped API instances. The function falls through to the next host
+# whenever an instance is unavailable, rate-limited, or blocks the request.
+PIPED_API_INSTANCES = [
+    "https://pipedapi.kavin.rocks",
+    "https://pipedapi.leptons.xyz",
+    "https://pipedapi.nosebs.ru",
+    "https://piped-api.privacy.com.de",
+    "https://pipedapi.adminforge.de",
+    "https://api.piped.yt",
+    "https://pipedapi.drgns.space",
+    "https://pipedapi.owo.si",
+    "https://pipedapi.ducks.party",
+]
 
-    try:
-        return await asyncio.to_thread(extract)
-    except Exception as exc:
-        print(f"YouTube duration lookup failed for {video_id}: {exc}")
-        return None
+
+async def youtube_duration(client, video_id):
+    """Get duration from public Piped instances with automatic fallback."""
+    for base_url in PIPED_API_INSTANCES:
+        try:
+            response = await client.get(
+                f"{base_url}/streams/{video_id}",
+                headers={"User-Agent": "Class29/1.0"},
+                timeout=12.0,
+            )
+            if response.status_code != 200:
+                continue
+            payload = response.json()
+            seconds = payload.get("duration")
+            if isinstance(seconds, (int, float)) and seconds > 0:
+                print(f"Duration found via {base_url}: {video_id} = {int(seconds)}s")
+                return int(seconds)
+        except Exception as exc:
+            print(f"Piped instance unavailable ({base_url}): {type(exc).__name__}")
+            continue
+    print(f"All Piped instances failed for video {video_id}")
+    return None
 
 
 async def youtube_title(client, video_id):
