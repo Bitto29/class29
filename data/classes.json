@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-27T14:19:09.412834+00:00",
+  "updated_at": "2026-11-28T14:06:16.175149+00:00",
   "groups": [
     {
       "id": "-1003984486117",
@@ -424,6 +424,25 @@
         {
           "name": "BANGLA",
           "classes": [
+            {
+              "id": "cv--1004201359575-387-SXSJAsZeF3o",
+              "source_key": "-1004201359575:387:SXSJAsZeF3o",
+              "title": "রেইনকোট",
+              "topic": "BANGLA",
+              "date": "2026-11-28T13:18:59+00:00",
+              "telegram_message_id": 387,
+              "resources": [
+                {
+                  "url": "https://drive.google.com/file/d/1ygx56Yt1unKg84UcnePS4vTK-0Zp2dVb/view?usp=drivesdk",
+                  "label": "Google Drive"
+                }
+              ],
+              "video_id": "SXSJAsZeF3o",
+              "url": "https://www.youtube.com/watch?v=SXSJAsZeF3o",
+              "duration_attempts": 1,
+              "duration_seconds": 7004,
+              "duration_checked": true
+            },
             {
               "id": "cv--1004201359575-384-_PHql-8rClY",
               "source_key": "-1004201359575:384:_PHql-8rClY",
